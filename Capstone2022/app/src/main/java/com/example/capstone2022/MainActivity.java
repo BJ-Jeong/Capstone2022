@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     final String TAG = this.getClass().getSimpleName();
 
-     home_ly;
+    LinearLayout home_ly;
     BottomNavigationView bottomNavigationView;
 
     @Override
