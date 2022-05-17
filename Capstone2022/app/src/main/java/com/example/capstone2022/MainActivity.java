@@ -1,13 +1,11 @@
 package com.example.capstone2022;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        home_ly = findViewById(R.id.home_ly);
+        // home_ly = findViewById(R.id.home_ly); TODO
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
     }
 
@@ -39,31 +37,32 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new TabSelectedListener());
     }
 
+    // TODO: 여기 있던 home_ly 들은 빌드를 위해 replace 되었으므로 수정할 것
     class TabSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.tab_home: {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new HomeFragment())
+                            .replace(R.id.tab_home, new HomeFragment())
                             .commit();
                     return true;
                 }
                 case R.id.tab_contact: {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new ContactFragment())
+                            .replace(R.id.tab_contact, new ContactFragment())
                             .commit();
                     return true;
                 }
                 case R.id.tab_mypage: {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new MypageFragment())
+                            .replace(R.id.tab_mypage, new MypageFragment())
                             .commit();
                     return true;
                 }
                 case R.id.tab_setting: {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new SettingsFragment())
+                            .replace(R.id.tab_setting, new SettingsFragment())
                             .commit();
                     return true;
                 }

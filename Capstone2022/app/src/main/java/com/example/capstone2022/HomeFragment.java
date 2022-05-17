@@ -1,12 +1,24 @@
 package com.example.capstone2022;
 
+import android.os.Build;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.capstone2022.api.corona.CoronaParser;
+
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,16 +61,38 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        if (getContext() == null) return null;
+
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        TextView population = view.findViewById(R.id.Population);
+
+
+        RequestQueue queue = Volley.newRequestQueue(getContext());
+        String url = BuildConfig.CORONA_URL;
+
+        StringRequest request = new StringRequest(url,
+                response -> {
+                    long decideCnt = CoronaParser.parseData(response).getDecideCnt();
+                    Log.d("Corona API", "corona decide count: " + decideCnt);
+                    population.setText(String.valueOf(decideCnt));
+                },
+                error -> Log.w("Corona API", "corona connection failed: " + error.getMessage()));
+
+        queue.add(request);
+
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
+
 }
