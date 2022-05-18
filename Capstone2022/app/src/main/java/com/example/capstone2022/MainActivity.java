@@ -12,64 +12,38 @@ import android.widget.LinearLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    final String TAG = this.getClass().getSimpleName();
-
-    LinearLayout home_ly;
     BottomNavigationView bottomNavigationView;
+    //바텀 네비게이션 뷰
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        init(); //객체 정의
-        SettingListener(); //리스너 등록
-
-        //맨 처음 시작할 탭 설정
-        bottomNavigationView.setSelectedItemId(R.id.tab_home);
-    }
-
-    private void init() {
-        home_ly = findViewById(R.id.home_ly);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-    }
 
-    private void SettingListener() {
-        //선택 리스너 등록
-        bottomNavigationView.setOnNavigationItemSelectedListener(new TabSelectedListener());
-    }
+        //처음화면
+        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new HomeFragment()).commit(); //FrameLayout에 fragment.xml 띄우기
 
-    class TabSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            switch (menuItem.getItemId()) {
-                case R.id.tab_home: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new HomeFragment())
-                            .commit();
-                    return true;
+        // 바텀 네비게이션뷰 안의 아이템 설정
+        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
+                    case
+                            R.layout.fragment_home: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new HomeFragment()).commit();
+                        break;
+                    case
+                            R.layout.fragment_contact: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new ContactFragment()).commit();
+                        break;
+                    case
+                            R.layout.fragment_mypage: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MypageFragment()).commit();
+                        break;
                 }
-                case R.id.tab_contact: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new ContactFragment())
-                            .commit();
-                    return true;
-                }
-                case R.id.tab_mypage: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new MypageFragment())
-                            .commit();
-                    return true;
-                }
-                case R.id.tab_setting: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new SettingsFragment())
-                            .commit();
-                    return true;
-                }
+                return true;
             }
-
-            return false;
-        }
+        });
     }
 }
+
