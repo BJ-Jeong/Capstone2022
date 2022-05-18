@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.195"
-        app:srcCompat="@drawable/Covid" />
+        app:srcCompat="@drawable/covid" />
 
     <ImageView
         android:id="@+id/Alect"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.654"
-        app:srcCompat="@drawable/Alect" />
+        app:srcCompat="@drawable/alect" />
 
     <TextView
         android:id="@+id/text_con1"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.378"
-        app:srcCompat="@drawable/Person" />
+        app:srcCompat="@drawable/person" />
 
     <TextView
         android:id="@+id/text_con3"
@@ -89,7 +89,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.511"
-        app:srcCompat="@drawable/Warning" />
+        app:srcCompat="@drawable/warning" />
 
     <TextView
         android:id="@+id/text_con4"
@@ -127,7 +127,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193"
-        app:srcCompat="@drawable/Edit" />
+        app:srcCompat="@drawable/edit" />
 
     <CheckBox
         android:id="@+id/checkBox1"
@@ -210,6 +210,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/Save" />
+        app:srcCompat="@drawable/save" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

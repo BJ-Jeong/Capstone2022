@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.195"
-        app:srcCompat="@drawable/Person" />
+        app:srcCompat="@drawable/person" />
 
     <ImageView
         android:id="@+id/Point"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.455"
-        app:srcCompat="@drawable/Point" />
+        app:srcCompat="@drawable/point" />
 
     <ImageView
         android:id="@+id/Date"
@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.56"
-        app:srcCompat="@drawable/Date" />
+        app:srcCompat="@drawable/date" />
 
     <ImageView
         android:id="@+id/Call"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.654"
-        app:srcCompat="@drawable/Call" />
+        app:srcCompat="@drawable/call" />
 
     <TextView
         android:id="@+id/text_me1"
@@ -166,7 +166,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.453"
-        app:srcCompat="@drawable/Edit" />
+        app:srcCompat="@drawable/edit" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -178,7 +178,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.558"
-        app:srcCompat="@drawable/Edit" />
+        app:srcCompat="@drawable/edit" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -190,7 +190,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.652"
-        app:srcCompat="@drawable/Edit" />
+        app:srcCompat="@drawable/edit" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -201,7 +201,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/Save" />
-
+        app:srcCompat="@drawable/save" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
