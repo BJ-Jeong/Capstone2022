@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
 
     defaultConfig {
         applicationId "com.example.capstone2022"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -37,10 +37,6 @@ dependencies {
 
     //bottom navigation view
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'com.android.support:design:29.0.0'
+    implementation 'com.android.support:design:32.0.0'
 
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
 }
