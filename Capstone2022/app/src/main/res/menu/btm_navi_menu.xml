@@ -18,9 +18,4 @@
         android:icon="@drawable/ic_mypage"
         android:title="마이페이지"/>
 
-    <item
-        android:id="@+id/tab_setting"
-        android:enabled="true"
-        android:icon="@drawable/ic_settings"
-        android:title="설정"/>
 </menu>
