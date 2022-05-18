@@ -15,7 +15,9 @@
         app:itemIconTint="@color/tab_selection_color"
         app:itemTextColor="@color/tab_selection_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/btm_navi_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/btm_navi_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
