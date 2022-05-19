@@ -2,6 +2,7 @@ package com.example.capstone2022;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,6 +37,8 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private TextView population;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -66,33 +69,40 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (getContext() == null) return null;
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        TextView population = view.findViewById(R.id.Population);
+        population = view.findViewById(R.id.Population);
+        population.setText("로딩중...");
 
+        updatePopulation();
+
+        return view;
+    }
+
+    public void updatePopulation() {
+        if (getContext() == null) return;
 
         RequestQueue queue = Volley.newRequestQueue(getContext());
         String url = BuildConfig.CORONA_URL;
 
         StringRequest request = new StringRequest(url,
                 response -> {
-                    long decideCnt = CoronaParser.parseData(response).getDecideCnt();
-                    Log.d("Corona API", "corona decide count: " + decideCnt);
-                    population.setText(String.valueOf(decideCnt));
+                    long addDecide = CoronaParser.parseData(response).getAddDecide();
+                    Log.d("Corona API", "corona decide count: " + addDecide);
+
+                    population.setText(String.valueOf(addDecide));
+                    population.invalidate();
+                    population.requestLayout();
                 },
                 error -> Log.w("Corona API", "corona connection failed: " + error.getMessage()));
 
         queue.add(request);
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
 }

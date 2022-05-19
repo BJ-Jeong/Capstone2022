@@ -1,74 +1,57 @@
 package com.example.capstone2022;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.LinearLayout;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.app.FragmentManager;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.capstone2022.api.corona.CoronaParser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
-    final String TAG = this.getClass().getSimpleName();
+import io.reactivex.rxjava3.core.Single;
 
-    LinearLayout home_ly;
+public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    //바텀 네비게이션 뷰
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        init(); //객체 정의
-        SettingListener(); //리스너 등록
-
-        //맨 처음 시작할 탭 설정
-        bottomNavigationView.setSelectedItemId(R.id.tab_home);
-    }
-
-    private void init() {
-        // home_ly = findViewById(R.id.home_ly); TODO
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-    }
 
-    private void SettingListener() {
-        //선택 리스너 등록
-        bottomNavigationView.setOnNavigationItemSelectedListener(new TabSelectedListener());
-    }
+        //처음화면
+        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new HomeFragment()).commit(); //FrameLayout에 fragment.xml 띄우기
 
-    // TODO: 여기 있던 home_ly 들은 빌드를 위해 replace 되었으므로 수정할 것
-    class TabSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        // 바텀 네비게이션뷰 안의 아이템 설정
+        bottomNavigationView.setOnItemSelectedListener(menuItem -> {
             switch (menuItem.getItemId()) {
-                case R.id.tab_home: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.tab_home, new HomeFragment())
-                            .commit();
-                    return true;
-                }
-                case R.id.tab_contact: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.tab_contact, new ContactFragment())
-                            .commit();
-                    return true;
-                }
-                case R.id.tab_mypage: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.tab_mypage, new MypageFragment())
-                            .commit();
-                    return true;
-                }
-                case R.id.tab_setting: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.tab_setting, new SettingsFragment())
-                            .commit();
-                    return true;
-                }
+                //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
+                case
+                        R.layout.fragment_home: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new HomeFragment()).commit();
+                    break;
+                case
+                        R.layout.fragment_contact: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new ContactFragment()).commit();
+                    break;
+                case
+                        R.layout.fragment_mypage: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MypageFragment()).commit();
+                    break;
             }
-
-            return false;
-        }
+            return true;
+        });
     }
 }
+
