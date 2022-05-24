@@ -2,14 +2,25 @@ package com.example.capstone2022;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.capstone2022.api.corona.CoronaParser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import io.reactivex.rxjava3.core.Single;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -26,23 +37,20 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new HomeFragment()).commit(); //FrameLayout에 fragment.xml 띄우기
 
         // 바텀 네비게이션뷰 안의 아이템 설정
-        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
-                    case
-                            R.layout.fragment_home: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new HomeFragment()).commit();
-                        break;
-                    case
-                            R.layout.fragment_contact: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new ContactFragment()).commit();
-                        break;
-                    case
-                            R.layout.fragment_mypage: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MypageFragment()).commit();
-                        break;
-                }
-                return true;
+        bottomNavigationView.setOnItemSelectedListener(menuItem -> {
+            switch (menuItem.getItemId()) {
+                //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
+                case
+                        R.layout.fragment_home: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new HomeFragment()).commit();
+                    break;
+                case
+                        R.layout.fragment_contact: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new ContactFragment()).commit();
+                    break;
+                case
+                        R.layout.fragment_mypage: getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MypageFragment()).commit();
+                    break;
             }
+            return true;
         });
     }
 }
