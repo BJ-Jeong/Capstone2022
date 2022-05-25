@@ -29,6 +29,7 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
     namespace 'com.example.capstone2022'
+    buildToolsVersion '32.0.0'
 }
 
 dependencies {
