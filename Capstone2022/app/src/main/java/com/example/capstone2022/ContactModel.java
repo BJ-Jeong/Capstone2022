@@ -1,7 +1,10 @@
 package com.example.capstone2022;
 
 public class ContactModel {
+    //변수 생성
     String name, number;
+
+    //getter 와 setter 설정
 
     public String getName() {
         return name;

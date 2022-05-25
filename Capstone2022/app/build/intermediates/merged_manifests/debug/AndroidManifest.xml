@@ -29,6 +29,7 @@
         android:theme="@style/Theme.Capstone2022" >
         <activity
             android:name="com.example.capstone2022.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
