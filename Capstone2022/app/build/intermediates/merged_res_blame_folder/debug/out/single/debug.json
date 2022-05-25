@@ -48,12 +48,12 @@
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\confirmed.png"
     },
     {
-        "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\drawable_date.png.flat",
-        "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\date.png"
-    },
-    {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\layout_home_notice.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\layout\\home_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\drawable_date.png.flat",
+        "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\date.png"
     },
     {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\warning.png"
     },
     {
-        "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\layout\\fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\drawable_me.png.flat",
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\me.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\layout\\fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\drawable_save.png.flat",
@@ -172,6 +172,10 @@
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\ic_home_on.png"
     },
     {
+        "merged": "com.example.capstone2022.app-merged_res-5:/layout_fragment_contact.xml.flat",
+        "source": "com.example.capstone2022.app-main-7:/layout/fragment_contact.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\layout_home_guide.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\layout\\home_guide.xml"
     },
@@ -206,10 +210,6 @@
     {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\drawable_ic_home.png.flat",
         "source": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-main-7:\\drawable\\ic_home.png"
-    },
-    {
-        "merged": "com.example.capstone2022.app-merged_res-5:/layout_activity_main.xml.flat",
-        "source": "com.example.capstone2022.app-main-7:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\user\\.gradle\\daemon\\7.4.2\\com.example.capstone2022.app-merged_res-5:\\drawable_people.png.flat",
