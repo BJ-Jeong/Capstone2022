@@ -7,11 +7,11 @@ import lombok.Data;
 @Data
 public class CoronaData {
 
-    private long deathCnt;
-    private long decideCnt;
-    private long addDeath;
-    private long addDecide;
-    private LocalDateTime updateTime;
+    private final long deathCnt;
+    private final long decideCnt;
+    private final long addDeath;
+    private final long addDecide;
+    private final LocalDateTime updateTime;
 
     public CoronaData(long deathCnt, long decideCnt, long addDeath, long addDecide, LocalDateTime updateTime) {
         this.deathCnt = deathCnt;
@@ -19,6 +19,26 @@ public class CoronaData {
         this.addDeath = addDeath;
         this.addDecide = addDecide;
         this.updateTime = updateTime;
+    }
+
+    public long getDeathCnt() {
+        return deathCnt;
+    }
+
+    public long getDecideCnt() {
+        return decideCnt;
+    }
+
+    public long getAddDeath() {
+        return addDeath;
+    }
+
+    public long getAddDecide() {
+        return addDecide;
+    }
+
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
     }
 
 }
