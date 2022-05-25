@@ -60,12 +60,6 @@ public class MainActivity extends AppCompatActivity {
                             .commit();
                     return true;
                 }
-                case R.id.tab_setting: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.tab_setting, new SettingsFragment())
-                            .commit();
-                    return true;
-                }
             }
 
             return false;
