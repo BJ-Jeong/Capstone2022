@@ -88,11 +88,14 @@ id text_me3
 id text_me4
 id tv_name
 id tv_number
+id webView
+id webView2
 layout activity_main
 layout fragment_contact
 layout fragment_home
 layout fragment_mypage
 layout home_guide
+layout home_help
 layout home_notice
 layout home_virus
 layout item_contact

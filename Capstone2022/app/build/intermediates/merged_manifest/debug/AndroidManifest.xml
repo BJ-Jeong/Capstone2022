@@ -9,6 +9,7 @@
         android:targetSdkVersion="32" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- To store the heap dumps and leak analysis results. -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -25,7 +26,6 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Capstone2022" >
         <activity
             android:name="com.example.capstone2022.MainActivity"
@@ -37,6 +37,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 얘네 추가해줘야지 버튼눌렀을 때 정상적으로 화면 이동 가능 -->
+        <activity android:name="com.example.capstone2022.VirusHome" />
+        <activity android:name="com.example.capstone2022.GuideHome" />
+        <activity android:name="com.example.capstone2022.NoticeHome" />
+        <activity android:name="com.example.capstone2022.HelpHome" />
 
         <provider
             android:name="leakcanary.internal.LeakCanaryFileProvider"

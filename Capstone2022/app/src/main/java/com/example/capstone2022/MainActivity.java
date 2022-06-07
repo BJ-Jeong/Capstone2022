@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -36,6 +38,50 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //확진자 추이 버튼 눌렀을때 액티비티 전환
+        ImageButton Virus = (ImageButton) findViewById(R.id.Virus);
+        Virus.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), VirusHome.class);
+                startActivity(intent);
+            }
+        });
+
+        //방역지침 버튼 눌렀을때 액티비티 전환
+        ImageButton Guide = (ImageButton) findViewById(R.id.Guide);
+        Guide.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), GuideHome.class);
+                startActivity(intent);
+            }
+        });
+
+        //안내문 버튼 눌렀을때 액티비티 전환
+        ImageButton Notice = (ImageButton) findViewById(R.id.Notice);
+        Notice.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), NoticeHome.class);
+                startActivity(intent);
+            }
+        });
+
+        //도움말 버튼 눌렀을때 액티비티 전환
+        ImageButton Help = (ImageButton) findViewById(R.id.Help);
+        Help.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), HelpHome.class);
+                startActivity(intent);
+            }
+        });
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
