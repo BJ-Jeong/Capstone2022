@@ -2486,6 +2486,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+drawable _1
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -2689,12 +2690,9 @@ id Confirmed
 id Covid
 id Date
 id FUNCTION
-id Guide
-id Help
 id META
 id Me
 id NO_DEBUG
-id Notice
 id Person
 id Point
 id Population
@@ -2705,7 +2703,6 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id Virus
 id Warning
 id accelerate
 id accessibility_action_clickable_span
@@ -2918,8 +2915,10 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id guide
 id guideline
 id header_title
+id help
 id hideable
 id home
 id homeAsUp
@@ -2931,7 +2930,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id imageView6
 id imageView7
 id imageView8
@@ -3080,6 +3078,7 @@ id noState
 id none
 id normal
 id north
+id notice
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -3260,10 +3259,10 @@ id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id virus
 id visible
 id visible_removing_fragment_view_tag
 id webView
-id webView2
 id west
 id withText
 id withinBounds

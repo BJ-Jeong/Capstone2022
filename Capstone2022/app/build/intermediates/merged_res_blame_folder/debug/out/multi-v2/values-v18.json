@@ -4,7 +4,7 @@
             "outputFile": "com.example.capstone2022.app-mergeDebugResources-35:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\9f3900012ca6d6e0a14bfd80fd35ae8e\\transformed\\appcompat-1.4.1\\res\\values-v18\\values-v18.xml",
+                    "source": "/Users/gimhyewon/.gradle/caches/transforms-3/9f3900012ca6d6e0a14bfd80fd35ae8e/transformed/appcompat-1.4.1/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
