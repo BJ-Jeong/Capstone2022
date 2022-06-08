@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/mypage_me"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="#F1F9FF"
+        android:backgroundTint="#F1F9FF"
+        android:onClick="ClickButton_mypage_me"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281"
+        app:srcCompat="@drawable/edit"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
     <ImageView
         android:id="@+id/Me"
         android:layout_width="352dp"
