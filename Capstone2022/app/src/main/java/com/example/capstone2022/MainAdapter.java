@@ -1,6 +1,5 @@
 package com.example.capstone2022;
 
-import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +12,11 @@ import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     //변수 생성
-    Activity activity;
+    ContactFragment activity;
     ArrayList<ContactModel> arrayList;
 
     // constructor 생성
-    public MainAdapter(Activity activity, ArrayList<ContactModel> arrayList){
+    public MainAdapter(ContactFragment activity, ArrayList<ContactModel> arrayList){
         this.activity =activity;
         this.arrayList =arrayList;
         notifyDataSetChanged();

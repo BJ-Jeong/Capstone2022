@@ -50,16 +50,19 @@ public class ContactFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 변수 설정
-        recyclerView = getView().findViewById(R.id.recycler_view);
-        // 권한 체크
-        checkPermission();
+
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // 변수 설정
+        View v = inflater.inflate(R.layout.fragment_contact, container, false);
+        recyclerView = v.findViewById(R.id.recycler_view);
+        // 권한 체크
+        checkPermission();
 
 
         return inflater.inflate(R.layout.fragment_contact, container, false);
@@ -130,9 +133,11 @@ public class ContactFragment extends Fragment {
             cursor.close();
         }
         //레이아웃 매니저 설정
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager lim = new LinearLayoutManager(getContext());
+        lim.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(lim);
         //어댑터 정의
-        adapter = new MainAdapter(getActivity(), arrayList);
+        adapter = new MainAdapter(this, arrayList);
         //어댑터 설정
         recyclerView.setAdapter(adapter);
     }

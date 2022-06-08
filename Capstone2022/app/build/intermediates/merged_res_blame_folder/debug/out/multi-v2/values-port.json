@@ -4,7 +4,7 @@
             "outputFile": "com.example.capstone2022.app-mergeDebugResources-35:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/gimhyewon/.gradle/caches/transforms-3/9f3900012ca6d6e0a14bfd80fd35ae8e/transformed/appcompat-1.4.1/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\9f3900012ca6d6e0a14bfd80fd35ae8e\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
