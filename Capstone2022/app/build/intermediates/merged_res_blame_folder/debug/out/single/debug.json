@@ -32,6 +32,10 @@
         "source": "com.example.capstone2022.app-main-39:/drawable/ic_mypage_on.png"
     },
     {
+        "merged": "com.example.capstone2022.app-merged_res-37:/drawable__1.png.flat",
+        "source": "com.example.capstone2022.app-main-39:/drawable/_1.png"
+    },
+    {
         "merged": "com.example.capstone2022.app-merged_res-37:/layout_activity_main.xml.flat",
         "source": "com.example.capstone2022.app-main-39:/layout/activity_main.xml"
     },

@@ -33,55 +33,12 @@ public class MainActivity extends AppCompatActivity {
     private ContactFragment frag2;
     private MypageFragment frag3;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //확진자 추이 버튼 눌렀을때 액티비티 전환
-        ImageButton Virus = (ImageButton) findViewById(R.id.Virus);
-        Virus.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), VirusHome.class);
-                startActivity(intent);
-            }
-        });
-
-        //방역지침 버튼 눌렀을때 액티비티 전환
-        ImageButton Guide = (ImageButton) findViewById(R.id.Guide);
-        Guide.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), GuideHome.class);
-                startActivity(intent);
-            }
-        });
-
-        //안내문 버튼 눌렀을때 액티비티 전환
-        ImageButton Notice = (ImageButton) findViewById(R.id.Notice);
-        Notice.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), NoticeHome.class);
-                startActivity(intent);
-            }
-        });
-
-        //도움말 버튼 눌렀을때 액티비티 전환
-        ImageButton Help = (ImageButton) findViewById(R.id.Help);
-        Help.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), HelpHome.class);
-                startActivity(intent);
-            }
-        });
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
@@ -109,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         frag2=new ContactFragment();
         frag3=new MypageFragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
+
     }
 
     // 프레그먼트 교체

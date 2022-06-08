@@ -4,7 +4,7 @@
             "outputFile": "com.example.capstone2022.app-mergeDebugResources-35:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\747ff83b4e87b68568dd6c85a2ff4943\\transformed\\material-1.6.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "/Users/gimhyewon/.gradle/caches/transforms-3/747ff83b4e87b68568dd6c85a2ff4943/transformed/material-1.6.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
