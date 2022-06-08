@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [com.squareup.leakcanary:leakcanary-android:2.9.1] /Users/gimhyewon/.gradle/caches/transforms-3/edfd6588584d937b992310e6d49eacb5/transformed/jetified-leakcanary-android-2.9.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.4.2] /Users/gimhyewon/.gradle/caches/transforms-3/060690ba546077646b5937404ca1764a/transformed/navigation-ui-2.4.2/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.6.0] /Users/gimhyewon/.gradle/caches/transforms-3/747ff83b4e87b68568dd6c85a2ff4943/transformed/material-1.6.0/AndroidManifest.xml:17:1-26:12
@@ -72,37 +72,37 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/gimhyewon/.gradle/caches/transforms-3/5a524be2f36308ce83b843e8c6cb9ff7/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/gimhyewon/.gradle/caches/transforms-3/317dbb18d4e9696fecc02bc723bd31da/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/gimhyewon/.gradle/caches/transforms-3/e6f6fa331162a940ec69f19d66319e85/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-34:12
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:5-66
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:5:5-66
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:22-64
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:8:5-72
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:6:5-72
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:8:22-70
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:6:22-70
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:9:5-71
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:5-71
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:9:22-69
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:22-69
 application
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:11:5-33:19
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:9:5-31:19
 MERGED from [com.google.android.material:material:1.6.0] /Users/gimhyewon/.gradle/caches/transforms-3/747ff83b4e87b68568dd6c85a2ff4943/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.0] /Users/gimhyewon/.gradle/caches/transforms-3/747ff83b4e87b68568dd6c85a2ff4943/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/gimhyewon/.gradle/caches/transforms-3/793cc73cbca26eb9d4254bf759c81269/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
@@ -128,53 +128,53 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/gimhyewon/.gradle/ca
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] /Users/gimhyewon/.gradle/caches/transforms-3/0a749be31ea44ac9da4ddac26b7c695a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:15:9-54
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:17:9-50
-	android:networkSecurityConfig
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:9-69
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:15:9-50
+	android:usesCleartextTraffic
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:16:9-44
 activity#com.example.capstone2022.MainActivity
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:9-26:20
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:9-24:20
 	android:exported
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:48-71
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:48-71
 	android:configChanges
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:13-74
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:19:13-74
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:19-47
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:13-25:29
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:13-23:29
 action#android.intent.action.MAIN
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:23:17-69
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:27-74
 activity#com.example.capstone2022.VirusHome
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:9-46
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:27:9-46
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:19-44
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:27:19-44
 activity#com.example.capstone2022.GuideHome
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:9-46
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:28:9-46
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:19-44
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:28:19-44
 activity#com.example.capstone2022.NoticeHome
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:31:9-47
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:9-47
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:31:19-45
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:19-45
 activity#com.example.capstone2022.HelpHome
-ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:32:9-45
+ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:9-45
 	android:name
-		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:32:19-43
+		ADDED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:19-43
 uses-sdk
 INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml

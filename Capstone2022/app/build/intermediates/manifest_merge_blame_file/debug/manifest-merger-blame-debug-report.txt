@@ -11,14 +11,14 @@
 9-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:5-66
-11-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:22-64
+11-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:5:5-66
+11-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-12-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:8:5-72
-12-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:8:22-70
+12-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:6:5-72
+12-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:6:22-70
 13    <uses-permission android:name="android.permission.READ_CONTACTS" />
-13-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:9:5-71
-13-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:9:22-69
+13-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:5-71
+13-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:7:22-69
 14    <!-- To store the heap dumps and leak analysis results. -->
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 15-->[com.squareup.leakcanary:leakcanary-android-core:2.9.1] /Users/gimhyewon/.gradle/caches/transforms-3/975dd535b746c952411449efb4f1bd1a/transformed/jetified-leakcanary-android-core-2.9.1/AndroidManifest.xml:25:5-80
@@ -31,59 +31,59 @@
 17-->[com.squareup.leakcanary:leakcanary-android-core:2.9.1] /Users/gimhyewon/.gradle/caches/transforms-3/975dd535b746c952411449efb4f1bd1a/transformed/jetified-leakcanary-android-core-2.9.1/AndroidManifest.xml:28:22-74
 18
 19    <application
-19-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:11:5-33:19
+19-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:9:5-31:19
 20        android:allowBackup="true"
-20-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:12:9-35
+20-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:10:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.7.0] /Users/gimhyewon/.gradle/caches/transforms-3/0a749be31ea44ac9da4ddac26b7c695a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 22        android:debuggable="true"
 23        android:extractNativeLibs="false"
 24        android:icon="@mipmap/ic_launcher"
-24-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:13:9-43
+24-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:11:9-43
 25        android:label="@string/app_name"
-25-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:14:9-41
-26        android:networkSecurityConfig="@xml/network_security_config"
-26-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:9-69
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:15:9-54
-28        android:supportsRtl="true"
-28-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:16:9-35
-29        android:testOnly="true"
-30        android:theme="@style/Theme.Capstone2022" >
-30-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:17:9-50
+25-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:12:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:13:9-54
+27        android:supportsRtl="true"
+27-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:14:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.Capstone2022"
+29-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:15:9-50
+30        android:usesCleartextTraffic="true" >
+30-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:16:9-44
 31        <activity
-31-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:9-26:20
+31-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:9-24:20
 32            android:name="com.example.capstone2022.MainActivity"
-32-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:19-47
+32-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:19-47
 33            android:configChanges="keyboardHidden|orientation|screenSize"
-33-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:13-74
+33-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:19:13-74
 34            android:exported="true" >
-34-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:48-71
+34-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:18:48-71
 35            <intent-filter>
-35-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:13-25:29
+35-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:20:13-23:29
 36                <action android:name="android.intent.action.MAIN" />
-36-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:23:17-69
-36-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:23:25-66
+36-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:17-69
+36-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:25-66
 37
 38                <category android:name="android.intent.category.LAUNCHER" />
-38-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:24:17-77
-38-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:24:27-74
+38-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:17-77
+38-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:27-74
 39            </intent-filter>
 40        </activity>
 41
 42        <!-- 얘네 추가해줘야지 버튼눌렀을 때 정상적으로 화면 이동 가능 -->
 43        <activity android:name="com.example.capstone2022.VirusHome" />
-43-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:9-46
-43-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:19-44
+43-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:27:9-46
+43-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:27:19-44
 44        <activity android:name="com.example.capstone2022.GuideHome" />
-44-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:9-46
-44-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:19-44
+44-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:28:9-46
+44-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:28:19-44
 45        <activity android:name="com.example.capstone2022.NoticeHome" />
-45-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:31:9-47
-45-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:31:19-45
+45-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:9-47
+45-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:29:19-45
 46        <activity android:name="com.example.capstone2022.HelpHome" />
-46-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:32:9-45
-46-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:32:19-43
+46-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:9-45
+46-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:30:19-43
 47
 48        <provider
 48-->[com.squareup.leakcanary:leakcanary-android-core:2.9.1] /Users/gimhyewon/.gradle/caches/transforms-3/975dd535b746c952411449efb4f1bd1a/transformed/jetified-leakcanary-android-core-2.9.1/AndroidManifest.xml:31:9-39:20
@@ -187,12 +187,12 @@
 101            <intent-filter>
 101-->[com.squareup.leakcanary:leakcanary-android-core:2.9.1] /Users/gimhyewon/.gradle/caches/transforms-3/975dd535b746c952411449efb4f1bd1a/transformed/jetified-leakcanary-android-core-2.9.1/AndroidManifest.xml:84:13-90:29
 102                <action android:name="android.intent.action.MAIN" />
-102-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:23:17-69
-102-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:23:25-66
+102-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:17-69
+102-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:21:25-66
 103
 104                <category android:name="android.intent.category.LAUNCHER" />
-104-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:24:17-77
-104-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:24:27-74
+104-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:17-77
+104-->/Users/gimhyewon/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/AndroidManifest.xml:22:27-74
 105                <!-- Android TV launcher intent -->
 106                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
 106-->[com.squareup.leakcanary:leakcanary-android-core:2.9.1] /Users/gimhyewon/.gradle/caches/transforms-3/975dd535b746c952411449efb4f1bd1a/transformed/jetified-leakcanary-android-core-2.9.1/AndroidManifest.xml:89:17-86
