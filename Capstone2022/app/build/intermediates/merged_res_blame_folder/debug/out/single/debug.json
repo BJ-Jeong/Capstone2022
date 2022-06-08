@@ -8,12 +8,12 @@
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/layout/home_notice.xml"
     },
     {
-        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_notice.png.flat",
-        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/notice.png"
-    },
-    {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_home_on.png.flat",
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_home_on.png"
+    },
+    {
+        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_notice.png.flat",
+        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/notice.png"
     },
     {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_contact_on.png.flat",
@@ -76,12 +76,12 @@
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_baseline_person_24.xml"
     },
     {
-        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_mypage.png.flat",
-        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_mypage.png"
-    },
-    {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable__1.png.flat",
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/_1.png"
+    },
+    {
+        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_mypage.png.flat",
+        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_mypage.png"
     },
     {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/layout_mypage_con.xml.flat",
@@ -192,10 +192,6 @@
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.capstone2022.app-merged_res-37:/layout_fragment_home.xml.flat",
-        "source": "com.example.capstone2022.app-main-39:/layout/fragment_home.xml"
-    },
-    {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/mipmap-xxxhdpi/ic_launcher.webp"
     },
@@ -210,6 +206,10 @@
     {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_guide.png.flat",
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/guide.png"
+    },
+    {
+        "merged": "com.example.capstone2022.app-merged_res-37:/layout_mypage_me.xml.flat",
+        "source": "com.example.capstone2022.app-main-39:/layout/mypage_me.xml"
     },
     {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_call.png.flat",

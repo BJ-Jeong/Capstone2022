@@ -44,6 +44,7 @@
         <activity android:name="com.example.capstone2022.GuideHome" />
         <activity android:name="com.example.capstone2022.NoticeHome" />
         <activity android:name="com.example.capstone2022.HelpHome" />
+        <activity android:name="com.example.capstone2022.MeMypage" />
 
         <provider
             android:name="leakcanary.internal.LeakCanaryFileProvider"

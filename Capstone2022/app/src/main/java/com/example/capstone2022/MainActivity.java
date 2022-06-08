@@ -115,5 +115,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void ClickButton_mypage_me(View view) {
+        Intent intent = new Intent(getApplicationContext(), MeMypage.class);
+        startActivity(intent);
+
+    }
+
 
 }
