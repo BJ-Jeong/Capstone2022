@@ -32,7 +32,10 @@
         <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/fragment_contact.xml" value="0.23837209302325582" />
         <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/home_help.xml" value="0.17806484295845998" />
         <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/item_contact.xml" value="0.17603850050658562" />
+        <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/mypage_con.xml" value="0.34601449275362317" />
+        <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/mypage_me.xml" value="0.34601449275362317" />
         <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/layout/virus_recent.xml" value="0.358695652173913" />
         <entry key="..\:/Capstone2022/Capstone2022/app/src/main/res/menu/btm_navi_menu.xml" value="0.36614583333333334" />
         <entry key="..\:/Capstone2022/app/src/main/res/layout/home_guide.xml" value="0.17447916666666666" />
@@ -49,6 +52,7 @@
         <entry key="..\:/Users/202030231/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/res/layout/home_virus.xml" value="0.1875" />
         <entry key="..\:/Users/202030231/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/res/layout/mypage_con.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/202030231/AndroidStudioProjects/Capstone2022/Capstone2022/app/src/main/res/layout/mypage_me.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/home_guide.xml" value="0.1" />
         <entry key="app/src/main/res/layout/home_help.xml" value="0.11524822695035461" />

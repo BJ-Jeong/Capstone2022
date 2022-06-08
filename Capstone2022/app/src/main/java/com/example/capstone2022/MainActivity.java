@@ -101,4 +101,23 @@ public class MainActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
 
     }
+
+    public void ClickButton1(View view) {
+        Intent intent = new Intent(getApplicationContext(), VirusHome.class);
+        startActivity(intent);
+    }
+    public void ClickButton2(View view) {
+        Intent intent = new Intent(getApplicationContext(), GuideHome.class);
+        startActivity(intent);
+    }
+    public void ClickButton3(View view) {
+        Intent intent = new Intent(getApplicationContext(), NoticeHome.class);
+        startActivity(intent);
+
+    }
+    public void ClickButton4(View view){
+        Intent intent = new Intent(getApplicationContext(), HelpHome.class);
+        startActivity(intent);
+    }
+
 }
