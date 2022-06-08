@@ -1,6 +1,9 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color blue1
+color darkblue
+color gray
 color purple_200
 color purple_500
 color purple_700
@@ -8,9 +11,11 @@ color tab_selection_color
 color teal_200
 color teal_700
 color white
+color white2
 drawable _1
 drawable alect
 drawable block
+drawable blue_back
 drawable call
 drawable confirmed
 drawable covid
@@ -28,6 +33,7 @@ drawable ic_launcher_foreground
 drawable ic_mypage
 drawable ic_mypage_on
 drawable ic_settings
+drawable layout_shadow
 drawable me
 drawable nofication
 drawable notice
@@ -49,6 +55,7 @@ id Person
 id Point
 id Population
 id Warning
+id back
 id bottomNavigationView
 id checkBox
 id checkBox1
@@ -65,8 +72,10 @@ id imageView6
 id imageView7
 id imageView8
 id imageView9
+id include
 id iv_image
 id main_frame
+id mypg_ti
 id notice
 id page
 id recycler_view
@@ -102,6 +111,16 @@ layout home_virus
 layout item_contact
 layout mypage_con
 layout mypage_me
+layout toolbar_conimfor
+layout toolbar_f_contact
+layout toolbar_f_home
+layout toolbar_f_mypage
+layout toolbar_h_guide
+layout toolbar_h_notice
+layout toolbar_h_virus
+layout toolbar_m_con
+layout toolbar_m_me
+layout toolbar_mycon
 menu btm_navi_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

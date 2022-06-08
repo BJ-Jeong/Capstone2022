@@ -1,9 +1,12 @@
 package com.example.capstone2022;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,12 +14,15 @@ public class GuideHome extends AppCompatActivity {
     private String TAG = GuideHome.class.getSimpleName();
 
     private WebView webView = null;
+    ImageView back_g;
+
 
 
     @Override    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_guide);
 
+        back_g = findViewById(R.id.back_guide);
         webView = (WebView) findViewById(R.id.webView);
 
 
@@ -28,5 +34,13 @@ public class GuideHome extends AppCompatActivity {
         webView.getSettings().setUseWideViewPort(true);
 
         webView.loadUrl("http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&brdGubun=&dataGubun=&ncvContSeq=371078&contSeq=371078&board_id=&gubun=ALL");
+
+        back_g.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent MyTntent = new Intent(GuideHome.this, HomeFragment.class);
+                startActivity(MyTntent);
+            }
+        });
     }
 }
