@@ -115,5 +115,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void ClickButton4(View view){
+        Intent intent = new Intent(getApplicationContext(), HelpHome.class);
+        startActivity(intent);
+    }
 
 }
