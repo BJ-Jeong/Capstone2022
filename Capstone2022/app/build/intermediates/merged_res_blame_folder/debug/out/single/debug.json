@@ -8,12 +8,12 @@
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/layout/home_notice.xml"
     },
     {
-        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_home_on.png.flat",
-        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_home_on.png"
-    },
-    {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_notice.png.flat",
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/notice.png"
+    },
+    {
+        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_home_on.png.flat",
+        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_home_on.png"
     },
     {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_contact_on.png.flat",
@@ -76,12 +76,12 @@
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_baseline_person_24.xml"
     },
     {
-        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable__1.png.flat",
-        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/_1.png"
-    },
-    {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable_ic_mypage.png.flat",
         "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/ic_mypage.png"
+    },
+    {
+        "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/drawable__1.png.flat",
+        "source": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-main-39:/drawable/_1.png"
     },
     {
         "merged": "/Users/gimhyewon/.gradle/daemon/7.4.2/com.example.capstone2022.app-merged_res-37:/layout_mypage_con.xml.flat",
