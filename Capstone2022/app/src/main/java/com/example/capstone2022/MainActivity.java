@@ -26,6 +26,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import io.reactivex.rxjava3.core.Single;
 
 public class MainActivity extends AppCompatActivity {
+
     BottomNavigationView bottomNavigationView;
     private FragmentManager fm;
     private FragmentTransaction ft;
@@ -33,21 +34,16 @@ public class MainActivity extends AppCompatActivity {
     private ContactFragment frag2;
     private MypageFragment frag3;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
-        {
+        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
-            {
-                switch (menuItem.getItemId())
-                {
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
                     case R.id.tab_home:
                         setFrag(0);
                         break;
@@ -62,60 +58,57 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        frag1=new HomeFragment();
-        frag2=new ContactFragment();
-        frag3=new MypageFragment();
+        frag1 = new HomeFragment();
+        frag2 = new ContactFragment();
+        frag3 = new MypageFragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
 
     }
 
     // 프레그먼트 교체
-    private void setFrag(int n)
-    {
-        FragmentManager fm =getFragmentManager();
+    private void setFrag(int n) {
+        FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        switch (n)
-        {
+        switch (n) {
             case 0:
-                ft.replace(R.id.main_frame,frag1);
+                ft.replace(R.id.main_frame, frag1);
                 ft.commit();
                 break;
 
             case 1:
-                ft.replace(R.id.main_frame,frag2);
+                ft.replace(R.id.main_frame, frag2);
                 ft.commit();
                 break;
 
             case 2:
-                ft.replace(R.id.main_frame,frag3);
+                ft.replace(R.id.main_frame, frag3);
                 ft.commit();
                 break;
-
 
         }
     }
 
     public void onConfigurationChanged(Configuration newConfig) {
-
         super.onConfigurationChanged(newConfig);
-
     }
 
     public void ClickButton1(View view) {
         Intent intent = new Intent(getApplicationContext(), VirusHome.class);
         startActivity(intent);
     }
+
     public void ClickButton2(View view) {
         Intent intent = new Intent(getApplicationContext(), GuideHome.class);
         startActivity(intent);
     }
+
     public void ClickButton3(View view) {
         Intent intent = new Intent(getApplicationContext(), NoticeHome.class);
         startActivity(intent);
-
     }
-    public void ClickButton4(View view){
+
+    public void ClickButton4(View view) {
         Intent intent = new Intent(getApplicationContext(), HelpHome.class);
         startActivity(intent);
     }

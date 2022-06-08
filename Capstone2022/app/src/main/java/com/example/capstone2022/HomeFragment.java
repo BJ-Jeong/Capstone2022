@@ -95,7 +95,7 @@ import java.util.concurrent.atomic.AtomicLong;
                         population.invalidate();
                         population.requestLayout();
                     },
-                    error -> Log.w("Corona API", "corona connection failed: " + error.getMessage()));
+                    error -> Log.w("Corona API", "Corona API Server connection failed: " + error.getMessage()));
 
             queue.add(request);
 
