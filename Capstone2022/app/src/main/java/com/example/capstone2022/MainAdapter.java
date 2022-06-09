@@ -1,5 +1,6 @@
 package com.example.capstone2022;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     //변수 생성
     ContactFragment activity;
     ArrayList<ContactModel> arrayList;
 
     // constructor 생성
-    public MainAdapter(ContactFragment activity, ArrayList<ContactModel> arrayList){
-        this.activity =activity;
-        this.arrayList =arrayList;
+    public MainAdapter(ContactFragment activity, ArrayList<ContactModel> arrayList) {
+        this.activity = activity;
+        this.arrayList = arrayList;
         notifyDataSetChanged();
     }
 
@@ -26,8 +27,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //뷰 정의
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_contact, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_contact, parent, false);
         //뷰 반환
         return new ViewHolder(view);
     }
@@ -44,6 +44,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
+        Log.i(getClass().getSimpleName(), "getItemCount called: " + arrayList.size());
         //리스트 사이즈 반환
         return arrayList.size();
     }
@@ -59,4 +60,5 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
             tvNumber = itemView.findViewById(R.id.tv_number);
         }
     }
+
 }

@@ -21,5 +21,4 @@
         tools:listitem="@layout/item_contact"
         tools:ignore="MissingConstraints" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

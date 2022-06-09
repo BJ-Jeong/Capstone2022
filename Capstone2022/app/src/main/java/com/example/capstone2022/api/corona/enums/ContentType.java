@@ -8,6 +8,7 @@ import lombok.Getter;
  * @see <a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Type">Mozilla Docs</a>
  */
 public enum ContentType {
+
     TEXT("text/html"),
     JSON("application/json"),
     XML("application/xml");
