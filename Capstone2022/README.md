@@ -12,6 +12,10 @@ build.gradle(:app) 파일의 `buildConfigField("String", "CORONA_URL", "\"http:/
 ## 라이브러리
 Lombok, Gson, RxJava, Volley, LeakCanary
 
-## toolbar 수정 (20220609 19:25)
+## toolbar 수정 (20220609)
+19:25
 toolbar와 오브젝트가 겹치지 않게 수정
 뒤로가기 버튼이 더 유연하게 움직이도록 수정
+
+22:46
+연락처 상세정보 xml,java 파일 구현

@@ -13,7 +13,7 @@ public class ContactMypage extends AppCompatActivity {
 
     @Override    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_notice);
+        setContentView(R.layout.mypage_con);
 
         back_c = findViewById(R.id.back_con);
 
