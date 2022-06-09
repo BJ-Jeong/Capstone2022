@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200px"
-        android:background="@drawable/layout_shadow">
+        android:background="@drawable/layout_shadow_bottom">
 
         <ImageView
             android:id="@+id/back_virus"

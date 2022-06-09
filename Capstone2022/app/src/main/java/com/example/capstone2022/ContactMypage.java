@@ -20,8 +20,8 @@ public class ContactMypage extends AppCompatActivity {
         back_c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MyTntent = new Intent(ContactMypage.this, MypageFragment.class);
-                startActivity(MyTntent);
+                Intent intent = new Intent(ContactMypage.this, MypageFragment.class);
+                startActivity(intent);
             }
         });
 

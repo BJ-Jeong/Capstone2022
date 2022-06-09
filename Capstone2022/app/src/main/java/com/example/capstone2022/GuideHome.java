@@ -38,7 +38,7 @@ public class GuideHome extends AppCompatActivity {
         back_g.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MyTntent = new Intent(GuideHome.this, HomeFragment.class);
+                Intent MyTntent = new Intent(GuideHome.this, MainActivity.class);
                 startActivity(MyTntent);
             }
         });

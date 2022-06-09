@@ -27,7 +27,7 @@ public class VirusHome extends AppCompatActivity {
         back_v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MyTntent = new Intent(VirusHome.this, HomeFragment.class);
+                Intent MyTntent = new Intent(VirusHome.this, MainActivity.class);
                 startActivity(MyTntent);
             }
         });

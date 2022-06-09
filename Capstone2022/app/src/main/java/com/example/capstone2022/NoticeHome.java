@@ -20,7 +20,7 @@ public class NoticeHome extends AppCompatActivity {
         back_n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent MyTntent = new Intent(NoticeHome.this, HomeFragment.class);
+                Intent MyTntent = new Intent(NoticeHome.this, MainActivity.class);
                 startActivity(MyTntent);
             }
         });
