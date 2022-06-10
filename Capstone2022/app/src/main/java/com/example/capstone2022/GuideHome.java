@@ -33,7 +33,7 @@ public class GuideHome extends AppCompatActivity {
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
 
-        webView.loadUrl("http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&brdGubun=&dataGubun=&ncvContSeq=371078&contSeq=371078&board_id=&gubun=ALL");
+        webView.loadUrl("http://ncov.mohw.go.kr/tcmBoardView.do?brdId=3&brdGubun=31&dataGubun=&ncvContSeq=6586&contSeq=6586&board_id=311&gubun=ALL");
 
         back_g.setOnClickListener(new View.OnClickListener() {
             @Override

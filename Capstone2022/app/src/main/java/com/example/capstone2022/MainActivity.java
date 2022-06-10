@@ -20,7 +20,6 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.capstone2022.api.corona.CoronaParser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import io.reactivex.rxjava3.core.Single;
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ClickButton4(View view) {
-        Intent intent = new Intent(getApplicationContext(), HelpHome.class);
+        Intent intent = new Intent(getApplicationContext(), MeMypage.class);
         startActivity(intent);
     }
 
