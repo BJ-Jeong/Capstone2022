@@ -217,6 +217,40 @@
         app:layout_constraintStart_toEndOf="@+id/checkBox2"
         app:layout_constraintTop_toBottomOf="@+id/text_me1"
         app:layout_constraintVertical_bias="0.004" />
+   
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="154dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="병원을 입력하세요 "
+        app:layout_constraintBottom_toTopOf="@+id/text_me3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Point"
+        app:layout_constraintTop_toBottomOf="@+id/text_me2"
+        app:layout_constraintVertical_bias="0.8" />
 
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="122dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="연락처를 입력하세요"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/include3"
+        app:layout_constraintTop_toBottomOf="@+id/text_me4"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
