@@ -107,6 +107,19 @@
         app:layout_constraintVertical_bias="0.581" />
 
     <TextView
+        android:id="@+id/text_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 선택"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
+    
+    <TextView
         android:id="@+id/text_me4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,7 +181,7 @@
         app:srcCompat="@drawable/edit" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/iv_edit"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
