@@ -99,11 +99,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ClickButton4(View view) {
-        Intent intent = new Intent(getApplicationContext(), MeMypage.class);
+        Intent intent = new Intent(getApplicationContext(), HelpHome.class);
         startActivity(intent);
     }
     public void ClickButton5(View view){
-        Intent intent = new Intent(getApplicationContext(), HelpHome.class);
+        Intent intent = new Intent(getApplicationContext(), MeMypage.class);
         startActivity(intent);
     }
 

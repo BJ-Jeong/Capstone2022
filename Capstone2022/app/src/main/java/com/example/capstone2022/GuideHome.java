@@ -21,7 +21,7 @@ public class GuideHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_guide);
 
-        back_g = findViewById(R.id.back_guide);
+        back_g = findViewById(R.id.back_help);
         webView = (WebView) findViewById(R.id.webView);
 
         webView.setWebViewClient(new WebViewClient());

@@ -57,7 +57,7 @@
         android:id="@+id/help"
         android:layout_width="140dp"
         android:layout_height="170dp"
-        android:onClick="ClickButton5"
+        android:onClick="ClickButton4"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
