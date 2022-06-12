@@ -19,33 +19,30 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.jetbrains.annotations.Contract;
+
 import java.util.ArrayList;
 
 public class ContactFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
     RecyclerView recyclerView;
-    ArrayList<ContactModel> arrayList = new ArrayList<>();
+    ArrayList<ContactModel> arrayList;
     MainAdapter adapter;
 
     public ContactFragment() {
-        // Required empty public constructor
     }
 
-    public static ContactFragment newInstance(String param1, String param2) {
-        ContactFragment fragment = new ContactFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    @NonNull
+    @Contract(" -> new")
+    public static ContactFragment newInstance() {
+        return new ContactFragment();
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        arrayList = new ArrayList<>();
     }
 
     @Override
@@ -60,9 +57,7 @@ public class ContactFragment extends Fragment {
 
     private void checkPermission() {
         // 사용자에게 권한을 허가받았는지 확인하는 함수.
-        if (ContextCompat.checkSelfPermission(getActivity(),
-                Manifest.permission.READ_CONTACTS)
-                != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             //연락처 접근 권한이 설정되어있지 않을 경우
             //자동으로 연락처 접근 권한을 요청함.
             ActivityCompat.requestPermissions(getActivity(),
@@ -80,9 +75,7 @@ public class ContactFragment extends Fragment {
         // ASC로 정렬
         String sort = ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC";
         // 커서 정의
-        Cursor cursor = getActivity().getContentResolver().query(
-                uri, null, null, null, sort
-        );
+        Cursor cursor = getActivity().getContentResolver().query(uri, null, null, null, sort);
         //상태 체크
         if (cursor.getCount() > 0) {
             //카운트가 0보다 클때 while 반복문 실행
@@ -144,4 +137,21 @@ public class ContactFragment extends Fragment {
             checkPermission();
         }
     }
+
+    public void onDestroy() {
+        super.onDestroy();
+        destroy();
+    }
+
+    public void onDestroyView() {
+        super.onDestroyView();
+        destroy();
+    }
+
+    private void destroy() {
+        this.adapter = null;
+        this.arrayList = null;
+        this.recyclerView = null;
+    }
+
 }

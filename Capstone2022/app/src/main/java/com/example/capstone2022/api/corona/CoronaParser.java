@@ -11,9 +11,8 @@ import java.time.LocalDateTime;
 public class CoronaParser {
 
     @NonNull
-    public static CoronaData parseData(String data) {
+    public static CoronaData parseData(@NonNull JsonObject jsonObject) {
 
-        JsonObject jsonObject = GsonUtil.toJson(data);
         long deathCnt = jsonObject.get("deathCnt").getAsLong();
         long decideCnt = jsonObject.get("decideCnt").getAsLong();
         long addDeath = jsonObject.get("addDeath").getAsLong();

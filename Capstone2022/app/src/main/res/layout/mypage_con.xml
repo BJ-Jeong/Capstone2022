@@ -144,7 +144,7 @@
         app:srcCompat="@drawable/edit" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/Vaccine2nd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="양성"
@@ -156,7 +156,7 @@
         app:layout_constraintVertical_bias="0.59" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/Vaccine3rd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="음성"
@@ -192,7 +192,7 @@
         app:layout_constraintVertical_bias="0.733" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/Vaccine1st"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="음성"
@@ -204,7 +204,7 @@
         app:layout_constraintVertical_bias="0.45" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/saveMyPage"
         android:layout_width="413dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,51 +1,56 @@
 package com.example.capstone2022;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
-import android.app.DatePickerDialog;
-import android.widget.DatePicker;
+import android.widget.RadioButton;
 import android.widget.TextView;
-import java.util.Calendar;
+import com.example.capstone2022.layout.ToggleButtonGroupTableLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Calendar;
+
 public class MeMypage extends AppCompatActivity {
-    ImageView iv_edit, back;
+
+    ImageView editVaccineDate, back;
     TextView text_day;
     DatePickerDialog datePickerDialog;
-    @Override    
+    ToggleButtonGroupTableLayout radioGroupVaccine;
+    RadioButton VaccineNo, Vaccine1st, Vaccine2nd, Vaccine3rd;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_me);
+
         back = findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MeMypage.this, MypageFragment.class);
-                startActivity(intent);
-            }
+        back.setOnClickListener(view -> {
+            Intent intent = new Intent(MeMypage.this, MypageFragment.class);
+            startActivity(intent);
         });
-        iv_edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calendar calendar = Calendar.getInstance();
-                int pYear = calendar.get(Calendar.YEAR);
-                int pMonth = calendar.get(Calendar.MONTH);
-                int pDay = calendar.get(Calendar.DAY_OF_MONTH);
-                datePickerDialog = new DatePickerDialog(MeMypage.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                        month = month+1;
-                        String date = year + "/" + month + "/" + day;
-                        text_day.setText(date);
-                    }
-                }, pYear, pMonth, pDay);
-                datePickerDialog.show();
-            }
+
+        editVaccineDate = findViewById(R.id.editVaccineDate);
+        editVaccineDate.setOnClickListener(view -> {
+            Calendar calendar = Calendar.getInstance();
+            int pYear = calendar.get(Calendar.YEAR);
+            int pMonth = calendar.get(Calendar.MONTH);
+            int pDay = calendar.get(Calendar.DAY_OF_MONTH);
+            datePickerDialog = new DatePickerDialog(MeMypage.this, (datePicker, year, month, day) -> {
+                month = month + 1;
+                String date = year + "/" + month + "/" + day;
+                text_day = findViewById(R.id.text_day);
+                text_day.setText(date);
+            }, pYear, pMonth, pDay);
+            datePickerDialog.show();
         });
+
+        radioGroupVaccine = findViewById(R.id.radioGroupVaccine);
+        VaccineNo = findViewById(R.id.VaccineNo);
+        Vaccine1st = findViewById(R.id.Vaccine1st);
+        Vaccine2nd = findViewById(R.id.Vaccine2nd);
+        Vaccine3rd = findViewById(R.id.Vaccine3rd);
 
     }
 }
-
