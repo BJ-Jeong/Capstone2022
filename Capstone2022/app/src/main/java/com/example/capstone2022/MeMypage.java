@@ -26,10 +26,7 @@ public class MeMypage extends AppCompatActivity {
         setContentView(R.layout.mypage_me);
 
         back = findViewById(R.id.back);
-        back.setOnClickListener(view -> {
-            Intent intent = new Intent(MeMypage.this, MypageFragment.class);
-            startActivity(intent);
-        });
+        back.setOnClickListener(view -> finish());
 
         editVaccineDate = findViewById(R.id.editVaccineDate);
         editVaccineDate.setOnClickListener(view -> {

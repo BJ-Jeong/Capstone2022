@@ -72,8 +72,6 @@ public class MypageFragment extends Fragment {
         this.vaccineInfo = null;
         this.confirmation = null;
         this.quarantineReleaseDate = null;
-
-        VolleyUtil.getQueue().cancelAll(getTag());
     }
 
 }
