@@ -4,19 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include layout="@layout/toolbar_m_con"/>
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="양성"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+    <include
+        android:id="@+id/include3"
+        layout="@layout/toolbar_m_con"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="149dp" />
 
     <ImageView
         android:id="@+id/Covid"
@@ -137,71 +130,11 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221"
+        app:layout_constraintVertical_bias="0.249"
         app:srcCompat="@drawable/edit" />
-
-    <CheckBox
-        android:id="@+id/Vaccine2nd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="양성"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
-
-    <CheckBox
-        android:id="@+id/Vaccine3rd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="음성"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="양성"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.736" />
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="음성"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
-
-    <CheckBox
-        android:id="@+id/Vaccine1st"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="음성"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
 
     <ImageView
         android:id="@+id/saveMyPage"
@@ -213,5 +146,80 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/save" />
+
+    <RadioGroup
+        android:id="@+id/self"
+        android:layout_width="197dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="280dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/selfpos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="양성" />
+
+        <RadioButton
+            android:id="@+id/selfneg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="음성" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fast"
+        android:layout_width="197dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="365dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/fastpos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="양성" />
+
+        <RadioButton
+            android:id="@+id/fastneg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="음성" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/pcr"
+        android:layout_width="197dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="450dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/pcrpos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="양성" />
+
+        <RadioButton
+            android:id="@+id/pcrneg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="음성" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

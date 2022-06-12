@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import com.example.capstone2022.api.APIConnector;
 import com.example.capstone2022.api.corona.CoronaParser;
 
+import org.jetbrains.annotations.Contract;
+
 public class HomeFragment extends Fragment {
 
     private TextView population;
@@ -19,9 +21,10 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
     }
 
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        return fragment;
+    @NonNull
+    @Contract(" -> new")
+    public static HomeFragment newInstance() {
+        return new HomeFragment();
     }
 
     @Override

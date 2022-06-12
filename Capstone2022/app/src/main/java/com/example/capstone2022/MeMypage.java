@@ -1,14 +1,14 @@
 package com.example.capstone2022;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import com.example.capstone2022.layout.ToggleButtonGroupTableLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.capstone2022.layout.ToggleButtonGroupTableLayout;
 
 import java.util.Calendar;
 
@@ -48,6 +48,5 @@ public class MeMypage extends AppCompatActivity {
         Vaccine1st = findViewById(R.id.Vaccine1st);
         Vaccine2nd = findViewById(R.id.Vaccine2nd);
         Vaccine3rd = findViewById(R.id.Vaccine3rd);
-
     }
 }

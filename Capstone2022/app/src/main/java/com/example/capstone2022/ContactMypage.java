@@ -6,8 +6,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.app.DatePickerDialog;
 import android.widget.DatePicker;
+import android.widget.RadioButton;
 import android.widget.TextView;
+
 import java.util.Calendar;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ContactMypage extends AppCompatActivity {
@@ -15,12 +18,13 @@ public class ContactMypage extends AppCompatActivity {
     ImageView edit, back_c;
     TextView text_con5;
     DatePickerDialog datePickerDialog;
+    RadioButton selfPos, selfNeg, fastPos, fastNeg, pcrPos, pcrNeg;
 
     private AppCompatActivity getActivity() {
         return this;
     }
 
-    @Override    
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_con);
@@ -36,13 +40,20 @@ public class ContactMypage extends AppCompatActivity {
             int pDay = calendar.get(Calendar.DAY_OF_MONTH);
 
             datePickerDialog = new DatePickerDialog(ContactMypage.this, (datePicker, year, month, day) -> {
-                month = month+1;
+                month = month + 1;
                 String date = year + "/" + month + "/" + day;
                 text_con5.setText(date);
             }, pYear, pMonth, pDay);
 
             datePickerDialog.show();
         });
+
+        selfPos = findViewById(R.id.selfpos);
+        selfNeg = findViewById(R.id.selfneg);
+        fastPos = findViewById(R.id.fastpos);
+        fastNeg = findViewById(R.id.fastneg);
+        pcrPos = findViewById(R.id.pcrpos);
+        pcrNeg = findViewById(R.id.pcrneg);
     }
 
 }
