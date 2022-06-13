@@ -10,7 +10,7 @@ import android.app.Fragment;
 import androidx.annotation.NonNull;
 
 import com.example.capstone2022.api.APIConnector;
-import com.example.capstone2022.api.corona.CoronaParser;
+import com.example.capstone2022.api.corona.CoronaData;
 
 import org.jetbrains.annotations.Contract;
 
@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         if (getContext() == null) return;
 
         APIConnector.GET("rest/corona", (jsonObject) -> {
-            long addDecide = CoronaParser.parseData(jsonObject).getAddDecide();
+            long addDecide = CoronaData.parseData(jsonObject).getAddDecide();
 
             population.setText(String.valueOf(addDecide));
             population.invalidate();

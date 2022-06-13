@@ -2,23 +2,30 @@ package com.example.capstone2022;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.capstone2022.api.APIConnector;
+import com.example.capstone2022.api.user.MemberData;
 import com.example.capstone2022.layout.ToggleButtonGroupTableLayout;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 
 public class MeMypage extends AppCompatActivity {
 
-    ImageView editVaccineDate, back;
-    TextView text_day;
+    ImageView editVaccineDate, back, saveMyPage;
+    EditText hospitalName, hospitalContact;
+    TextView textDay;
     DatePickerDialog datePickerDialog;
     ToggleButtonGroupTableLayout radioGroupVaccine;
-    RadioButton VaccineNo, Vaccine1st, Vaccine2nd, Vaccine3rd;
+    RadioButton vaccineNo, vaccine1st, vaccine2nd, vaccine3rd;
+    LocalDate vaccineDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +43,48 @@ public class MeMypage extends AppCompatActivity {
             int pDay = calendar.get(Calendar.DAY_OF_MONTH);
             datePickerDialog = new DatePickerDialog(MeMypage.this, (datePicker, year, month, day) -> {
                 month = month + 1;
+
+                vaccineDate = LocalDate.of(year, month, day);
                 String date = year + "/" + month + "/" + day;
-                text_day = findViewById(R.id.text_day);
-                text_day.setText(date);
+
+                textDay = findViewById(R.id.text_day);
+                textDay.setText(date);
             }, pYear, pMonth, pDay);
             datePickerDialog.show();
         });
 
         radioGroupVaccine = findViewById(R.id.radioGroupVaccine);
-        VaccineNo = findViewById(R.id.VaccineNo);
-        Vaccine1st = findViewById(R.id.Vaccine1st);
-        Vaccine2nd = findViewById(R.id.Vaccine2nd);
-        Vaccine3rd = findViewById(R.id.Vaccine3rd);
+        vaccineNo = findViewById(R.id.VaccineNo);
+        vaccine1st = findViewById(R.id.Vaccine1st);
+        vaccine2nd = findViewById(R.id.Vaccine2nd);
+        vaccine3rd = findViewById(R.id.Vaccine3rd);
+        hospitalName = findViewById(R.id.hospital_name);
+        hospitalContact = findViewById(R.id.hospital_contact);
+
+        saveMyPage = findViewById(R.id.saveMyPage);
+        saveMyPage.setOnClickListener(view -> {
+            RadioButton vaccineStatusButton = radioGroupVaccine.getActiveRadioButton();
+            if (vaccineStatusButton == null) {
+                sendToast("접종 상태를 선택하세요.");
+                return;
+            }
+
+            String vaccineStatus = vaccineStatusButton.getText().toString();
+            String hospitalNameString = hospitalName.getText().toString();
+            String hospitalContextString = hospitalContact.getText().toString();
+
+            if (hospitalNameString.isEmpty() || hospitalContextString.isEmpty()) {
+                sendToast("텍스트를 입력하세요.");
+                return;
+            }
+
+            // TODO
+            // APIConnector.POST("member", new MemberData());
+        });
     }
+
+    private void sendToast(String text) {
+        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
+    }
+
 }

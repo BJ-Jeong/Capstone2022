@@ -10,6 +10,8 @@ import android.widget.TableRow;
 
 import androidx.annotation.NonNull;
 
+import lombok.Getter;
+
 /**
  * @author diego
  * @see <a href="https://stackoverflow.com/questions/2381560/how-to-group-a-3x3-grid-of-radio-buttons">Stack Overflow</a>
@@ -17,6 +19,8 @@ import androidx.annotation.NonNull;
 public class ToggleButtonGroupTableLayout extends TableLayout implements View.OnClickListener {
 
     private static final String TAG = "ToggleButtonGroupTableLayout";
+
+    @Getter
     private RadioButton activeRadioButton;
 
     public ToggleButtonGroupTableLayout(Context context) {

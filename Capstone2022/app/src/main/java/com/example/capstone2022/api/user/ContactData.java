@@ -1,4 +1,4 @@
-package com.example.capstone2022.api.user.data;
+package com.example.capstone2022.api.user;
 
 import androidx.annotation.NonNull;
 
@@ -6,47 +6,47 @@ import com.example.capstone2022.util.GsonUtil;
 import com.google.gson.JsonObject;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class MemberData {
+public class ContactData {
 
-    private Long id;
+    private UUID uuid;
     private String name;
     private String phoneNo;
-    private String address;
 
-    private MemberCoronaInfo coronaInfo;
+    private ContactCoronaInfo coronaInfo;
 
     @Data
     @AllArgsConstructor
-    public static class MemberCoronaInfo {
+    public static class ContactCoronaInfo {
         private LocalDateTime confirmationDate;
         private LocalDateTime finalVaccineDate;
         private LocalDateTime quarantineReleaseDate;
+        private boolean overseasEntry;
+        private boolean closeContact;
     }
 
     @NonNull
-    public static MemberData parseMember(String data) {
-
-        JsonObject jsonObject = GsonUtil.toJson(data);
-
-        Long id = jsonObject.get("id").getAsLong();
+    public static ContactData parseContact(@NonNull JsonObject jsonObject) {
+        UUID uuid = UUID.fromString(jsonObject.get("id").getAsString());
         String name = jsonObject.get("name").getAsString();
         String phoneNo = jsonObject.get("phoneNo").getAsString();
-        String address = jsonObject.get("address").getAsString();
 
         JsonObject coronaInfo = jsonObject.getAsJsonObject("coronaInfo");
 
         LocalDateTime confirmationDate = LocalDateTime.parse(coronaInfo.get("confirmationDate").getAsString());
         LocalDateTime finalVaccineDate = LocalDateTime.parse(coronaInfo.get("finalVaccineDate").getAsString());
         LocalDateTime quarantineReleaseDate = LocalDateTime.parse(coronaInfo.get("quarantineReleaseDate").getAsString());
+        boolean overseasEntry = jsonObject.get("overseasEntry").getAsBoolean();
+        boolean closeContact = jsonObject.get("closeContact").getAsBoolean();
 
-        return new MemberData(id, name, phoneNo, address,
-                new MemberData.MemberCoronaInfo(confirmationDate, finalVaccineDate, quarantineReleaseDate));
+        return new ContactData(uuid, name, phoneNo,
+                new ContactData.ContactCoronaInfo(confirmationDate, finalVaccineDate, quarantineReleaseDate, overseasEntry, closeContact));
     }
 
 }

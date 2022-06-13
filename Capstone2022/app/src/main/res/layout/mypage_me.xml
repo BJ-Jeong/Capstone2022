@@ -193,9 +193,10 @@
         app:srcCompat="@drawable/save" />
 
     <EditText
-        android:id="@+id/hospital_text"
+        android:id="@+id/hospital_name"
         android:layout_width="154dp"
         android:layout_height="48dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
@@ -203,11 +204,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/text_me3"
         app:layout_constraintStart_toEndOf="@+id/Point"
-        app:layout_constraintTop_toBottomOf="@+id/text_me2"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/text_me2" />
 
     <EditText
-        android:id="@+id/hospital_no_textt"
+        android:id="@+id/hospital_contact"
         android:layout_width="165dp"
         android:layout_height="48dp"
         android:layout_marginTop="13dp"
@@ -219,6 +219,6 @@
         app:layout_constraintBottom_toTopOf="@+id/saveMyPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_me4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.571" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
