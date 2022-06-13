@@ -2,18 +2,32 @@ package com.example.capstone2022.api.corona;
 
 import androidx.annotation.NonNull;
 
-import com.example.capstone2022.api.corona.data.CoronaData;
-import com.example.capstone2022.util.GsonUtil;
 import com.google.gson.JsonObject;
 
 import java.time.LocalDateTime;
 
-public class CoronaParser {
+import lombok.Data;
+
+@Data
+public class CoronaData {
+
+    private final long deathCnt;
+    private final long decideCnt;
+    private final long addDeath;
+    private final long addDecide;
+    private final LocalDateTime updateTime;
+
+    public CoronaData(long deathCnt, long decideCnt, long addDeath, long addDecide, LocalDateTime updateTime) {
+        this.deathCnt = deathCnt;
+        this.decideCnt = decideCnt;
+        this.addDeath = addDeath;
+        this.addDecide = addDecide;
+        this.updateTime = updateTime;
+    }
 
     @NonNull
-    public static CoronaData parseData(String data) {
+    public static CoronaData parseData(@NonNull JsonObject jsonObject) {
 
-        JsonObject jsonObject = GsonUtil.toJson(data);
         long deathCnt = jsonObject.get("deathCnt").getAsLong();
         long decideCnt = jsonObject.get("decideCnt").getAsLong();
         long addDeath = jsonObject.get("addDeath").getAsLong();

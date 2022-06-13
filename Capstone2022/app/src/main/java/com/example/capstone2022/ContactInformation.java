@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ContactImformation extends AppCompatActivity {
+public class ContactInformation extends AppCompatActivity {
 
     ImageView back_im;
 
@@ -17,11 +17,8 @@ public class ContactImformation extends AppCompatActivity {
 
         back_im = findViewById(R.id.back_im);
 
-        back_im.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        back_im.setOnClickListener(view -> {
 
-            }
         });
     }
 }

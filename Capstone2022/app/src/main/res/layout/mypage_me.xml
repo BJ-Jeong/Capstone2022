@@ -4,20 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include layout="@layout/toolbar_m_me"/>
 
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1차 접종"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="0.0" />
+    <include
+        android:id="@+id/include4"
+        layout="@layout/toolbar_m_me" />
 
     <ImageView
         android:id="@+id/Person"
@@ -114,11 +104,11 @@
         android:textColor="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
-    
+        app:layout_constraintVertical_bias="0.625" />
+
     <TextView
         android:id="@+id/text_me4"
         android:layout_width="wrap_content"
@@ -132,44 +122,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.672" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="미접종"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/text_me1"
-        app:layout_constraintTop_toBottomOf="@+id/Person"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3차 접종"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
+    <com.example.capstone2022.layout.ToggleButtonGroupTableLayout
+        android:id="@+id/radioGroupVaccine"
+        android:layout_width="169dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
-        app:srcCompat="@drawable/edit" />
+        app:layout_constraintTop_toBottomOf="@+id/text_me1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/VaccineNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미접종" />
+
+            <RadioButton
+                android:id="@+id/Vaccine1st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1차 접종" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/Vaccine2nd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2차 접종" />
+
+            <RadioButton
+                android:id="@+id/Vaccine3rd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3차 접종" />
+        </TableRow>
+
+    </com.example.capstone2022.layout.ToggleButtonGroupTableLayout>
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/editVaccineDate"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -181,19 +181,7 @@
         app:srcCompat="@drawable/edit" />
 
     <ImageView
-        android:id="@+id/iv_edit"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684"
-        app:srcCompat="@drawable/edit" />
-
-    <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/saveMyPage"
         android:layout_width="413dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -204,53 +192,33 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/save" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="11dp"
-        android:text="2차 접종"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/text_me1"
-        app:layout_constraintVertical_bias="0.004" />
-   
     <EditText
-        android:id="@+id/edit1"
+        android:id="@+id/hospital_name"
         android:layout_width="154dp"
         android:layout_height="48dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="11dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
+        android:hint="병원을 입력하세요"
         android:inputType="textPersonName"
-        android:text="병원을 입력하세요 "
         app:layout_constraintBottom_toTopOf="@+id/text_me3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Point"
-        app:layout_constraintTop_toBottomOf="@+id/text_me2"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/text_me2" />
 
     <EditText
-        android:id="@+id/edit2"
+        android:id="@+id/hospital_contact"
         android:layout_width="165dp"
         android:layout_height="48dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="122dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="연락처를 입력하세요"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        android:hint="연락처를 입력하세요"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/saveMyPage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/include3"
         app:layout_constraintTop_toBottomOf="@+id/text_me4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.571" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

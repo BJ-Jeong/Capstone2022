@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Capstone2022"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ContactImformation"
+            android:name=".ContactInformation"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

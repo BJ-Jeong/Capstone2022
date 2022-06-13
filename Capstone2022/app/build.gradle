@@ -15,7 +15,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "CORONA_URL", "\"http://10.0.2.2:8080/rest/corona\"")
+        buildConfigField("String", "SERVER_URL", "\"http://10.0.2.2:8080/\"")
     }
 
     buildTypes {
