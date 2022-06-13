@@ -5,6 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Fragment;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -13,17 +17,16 @@ import android.app.Fragment;
  */
 public class MypageFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    ViewGroup viewGroup;
+    TextView hname, hnumber,vdate;
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public MypageFragment() {
-        // Required empty public constructor
     }
 
     /**
@@ -54,9 +57,25 @@ public class MypageFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mypage, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater,@Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_mypage, container, false);
+
+        hname = view.findViewById(R.id.tv_hname_output);
+        vdate = view.findViewById(R.id.tv_vaccine_date);
+        hnumber = view.findViewById(R.id.tv_hnumber_output);
+
+        Bundle bundle = getArguments();
+        String name,date,number;
+
+        name = bundle.getString("name");
+        date = bundle.getString("date");
+        number = bundle.getString("number");
+
+        hname.setText(name);
+        vdate.setText(date);
+        hnumber.setText(number);
+
+        return view;
     }
 }

@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private ContactFragment frag2;
     private MypageFragment frag3;
 
+    MypageFragment mypageFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +63,23 @@ public class MainActivity extends AppCompatActivity {
         frag2 = new ContactFragment();
         frag3 = new MypageFragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
+
+
+        ft.replace(R.id.main_frame, frag3);
+        ft.commit();
+
+        Intent intent = getIntent();
+        String name,date,number;
+        name = intent.getStringExtra("name");
+        date = intent.getStringExtra("date");
+        number = intent.getStringExtra("number");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("name",name);
+        bundle.putString("date",date);
+        bundle.putString("number",number);
+
+        frag3.setArguments(bundle);
 
     }
 

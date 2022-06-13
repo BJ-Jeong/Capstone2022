@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
     <include layout="@layout/toolbar_f_home"/>
 
@@ -21,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.432"
         app:srcCompat="@drawable/virus"
+        android:background="@color/white"
         tools:ignore="OnClick,SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -36,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433"
         app:srcCompat="@drawable/guide"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -51,6 +54,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.784"
         app:srcCompat="@drawable/notice"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -66,6 +70,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.784"
         app:srcCompat="@drawable/help"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
