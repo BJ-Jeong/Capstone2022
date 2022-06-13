@@ -2,38 +2,26 @@ package com.example.capstone2022;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import com.example.capstone2022.util.VolleyUtil;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import io.reactivex.rxjava3.core.Single;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     private FragmentManager fm;
     private FragmentTransaction ft;
-    private HomeFragment frag1;
-    private ContactFragment frag2;
-    private MypageFragment frag3;
-
-    MypageFragment mypageFragment;
+    private HomeFragment homeFragment;
+    private ContactFragment contactFragment;
+    private MypageFragment mypageFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,28 +47,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        frag1 = new HomeFragment();
-        frag2 = new ContactFragment();
-        frag3 = new MypageFragment();
+        homeFragment = new HomeFragment();
+        contactFragment = new ContactFragment();
+        mypageFragment = new MypageFragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
 
-
-        ft.replace(R.id.main_frame, frag3);
-        ft.commit();
-
-        Intent intent = getIntent();
-        String name,date,number;
-        name = intent.getStringExtra("name");
-        date = intent.getStringExtra("date");
-        number = intent.getStringExtra("number");
-
-        Bundle bundle = new Bundle();
-        bundle.putString("name",name);
-        bundle.putString("date",date);
-        bundle.putString("number",number);
-
-        frag3.setArguments(bundle);
-
+        VolleyUtil.setContext(getApplicationContext());
     }
 
     // 프레그먼트 교체
@@ -90,17 +62,17 @@ public class MainActivity extends AppCompatActivity {
 
         switch (n) {
             case 0:
-                ft.replace(R.id.main_frame, frag1);
+                ft.replace(R.id.main_frame, homeFragment);
                 ft.commit();
                 break;
 
             case 1:
-                ft.replace(R.id.main_frame, frag2);
+                ft.replace(R.id.main_frame, contactFragment);
                 ft.commit();
                 break;
 
             case 2:
-                ft.replace(R.id.main_frame, frag3);
+                ft.replace(R.id.main_frame, mypageFragment);
                 ft.commit();
                 break;
 
