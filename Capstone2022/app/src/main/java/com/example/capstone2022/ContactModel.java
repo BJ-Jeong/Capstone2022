@@ -1,6 +1,7 @@
 package com.example.capstone2022;
 
 public class ContactModel {
+
     //변수 생성
     String name, number;
 
@@ -21,4 +22,5 @@ public class ContactModel {
     public void setNumber(String number) {
         this.number = number;
     }
+
 }

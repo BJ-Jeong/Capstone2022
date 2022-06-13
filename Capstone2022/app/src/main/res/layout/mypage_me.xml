@@ -181,7 +181,7 @@
         app:srcCompat="@drawable/edit" />
 
     <ImageView
-        android:id="@+id/saveMyPage"
+        android:id="@+id/saveMyPageMe"
         android:layout_width="413dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -216,7 +216,7 @@
         android:ems="10"
         android:hint="연락처를 입력하세요"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/saveMyPage"
+        app:layout_constraintBottom_toTopOf="@+id/saveMyPageMe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_me4"
         app:layout_constraintVertical_bias="0.571" />

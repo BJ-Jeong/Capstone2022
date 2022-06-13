@@ -10,12 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.capstone2022.api.APIConnector;
-import com.example.capstone2022.api.user.MemberData;
 import com.example.capstone2022.layout.ToggleButtonGroupTableLayout;
+import com.example.capstone2022.service.UUIDService;
 
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.UUID;
 
 public class MeMypage extends AppCompatActivity {
 
@@ -61,7 +61,7 @@ public class MeMypage extends AppCompatActivity {
         hospitalName = findViewById(R.id.hospital_name);
         hospitalContact = findViewById(R.id.hospital_contact);
 
-        saveMyPage = findViewById(R.id.saveMyPage);
+        saveMyPage = findViewById(R.id.saveMyPageMe);
         saveMyPage.setOnClickListener(view -> {
             RadioButton vaccineStatusButton = radioGroupVaccine.getActiveRadioButton();
             if (vaccineStatusButton == null) {
@@ -73,13 +73,15 @@ public class MeMypage extends AppCompatActivity {
             String hospitalNameString = hospitalName.getText().toString();
             String hospitalContextString = hospitalContact.getText().toString();
 
-            if (hospitalNameString.isEmpty() || hospitalContextString.isEmpty()) {
-                sendToast("텍스트를 입력하세요.");
+            if (hospitalNameString.isEmpty() || hospitalContextString.isEmpty() || datePickerDialog == null) {
+                sendToast("텍스트를 입력하고 접종 날짜를 선택하세요.");
                 return;
             }
 
-            // TODO
-            // APIConnector.POST("member", new MemberData());
+            UUID uuid = new UUIDService(getApplicationContext()).getUUID();
+            /* APIConnector.POST("member", new MemberData(uuid, new MemberData.MemberCoronaInfo(
+
+            )));*/
         });
     }
 
