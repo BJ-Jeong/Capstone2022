@@ -16,9 +16,6 @@ import lombok.Data;
 public class MemberData {
 
     private UUID uuid;
-    private String name;
-    private String phoneNo;
-    private String address;
 
     private MemberCoronaInfo coronaInfo;
 
@@ -33,9 +30,6 @@ public class MemberData {
     @NonNull
     public static MemberData parseMember(@NonNull JsonObject jsonObject) {
         UUID uuid = UUID.fromString(jsonObject.get("id").getAsString());
-        String name = jsonObject.get("name").getAsString();
-        String phoneNo = jsonObject.get("phoneNo").getAsString();
-        String address = jsonObject.get("address").getAsString();
 
         JsonObject coronaInfo = jsonObject.getAsJsonObject("coronaInfo");
 
@@ -43,7 +37,7 @@ public class MemberData {
         LocalDateTime finalVaccineDate = LocalDateTime.parse(coronaInfo.get("finalVaccineDate").getAsString());
         LocalDateTime quarantineReleaseDate = LocalDateTime.parse(coronaInfo.get("quarantineReleaseDate").getAsString());
 
-        return new MemberData(uuid, name, phoneNo, address,
+        return new MemberData(uuid,
                 new MemberData.MemberCoronaInfo(confirmationDate, finalVaccineDate, quarantineReleaseDate));
     }
 

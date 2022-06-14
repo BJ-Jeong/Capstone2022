@@ -13,7 +13,7 @@
         android:id="@+id/virus"
         android:layout_width="140dp"
         android:layout_height="181dp"
-        android:onClick="ClickButton1"
+        android:onClick="VirusButton"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
         android:id="@+id/guide"
         android:layout_width="140dp"
         android:layout_height="180dp"
-        android:onClick="ClickButton2"
+        android:onClick="GuideButton"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         android:id="@+id/notice"
         android:layout_width="140dp"
         android:layout_height="170dp"
-        android:onClick="ClickButton3"
+        android:onClick="NoticeButton"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
         android:id="@+id/help"
         android:layout_width="140dp"
         android:layout_height="170dp"
-        android:onClick="ClickButton4"
+        android:onClick="HelpHomeButton"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,6 +95,6 @@
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/page"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.174" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

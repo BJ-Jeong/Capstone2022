@@ -1,11 +1,11 @@
 package com.example.capstone2022;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.app.Fragment;
 
 import androidx.annotation.NonNull;
 
@@ -55,6 +55,26 @@ public class HomeFragment extends Fragment {
             population.invalidate();
             population.requestLayout();
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        destroy();
+
+        super.onDestroy();
+    }
+
+    @Override
+    public void onDestroyView() {
+        destroy();
+
+        super.onDestroyView();
+    }
+
+    private void destroy() {
+        this.population = null;
+
+        APIConnector.cancelAll();
     }
 
 }

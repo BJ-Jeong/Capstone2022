@@ -20,6 +20,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.capstone2022.api.APIConnector;
+
 import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
@@ -160,19 +162,23 @@ public class ContactFragment extends Fragment {
     }
 
     public void onDestroy() {
-        super.onDestroy();
         destroy();
+
+        super.onDestroy();
     }
 
     public void onDestroyView() {
-        super.onDestroyView();
         destroy();
+
+        super.onDestroyView();
     }
 
     private void destroy() {
         this.adapter = null;
         this.arrayList = null;
         this.recyclerView = null;
+
+        APIConnector.cancelAll();
     }
 
 }

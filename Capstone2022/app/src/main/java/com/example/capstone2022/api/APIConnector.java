@@ -18,6 +18,8 @@ import java.util.function.Consumer;
 
 public class APIConnector {
 
+    private static final String requestTag = "APIConnector";
+
     public static void GET(String path, @NonNull Consumer<JsonObject> after) {
         String url = BuildConfig.SERVER_URL + path;
 
@@ -25,6 +27,7 @@ public class APIConnector {
                 response -> after.accept(GsonUtil.toJson(response)),
                 error -> Log.w("APIConnector", path + " GET data failed: " + error.getMessage()));
 
+        request.setTag(requestTag);
         VolleyUtil.getQueue().add(request);
     }
 
@@ -51,7 +54,12 @@ public class APIConnector {
         };
 
         request.setShouldCache(false);
+        request.setTag(requestTag);
         VolleyUtil.getQueue().add(request);
+    }
+
+    public static void cancelAll() {
+        VolleyUtil.getQueue().cancelAll(requestTag);
     }
 
 }

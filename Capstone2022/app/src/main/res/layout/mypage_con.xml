@@ -137,7 +137,7 @@
         app:srcCompat="@drawable/edit" />
 
     <ImageView
-        android:id="@+id/saveMyPage"
+        android:id="@+id/saveMyPageCon"
         android:layout_width="413dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,15 +1,17 @@
 package com.example.capstone2022;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.app.Fragment;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.capstone2022.util.VolleyUtil;
+import com.example.capstone2022.api.APIConnector;
+import com.example.capstone2022.api.user.MemberData;
+import com.example.capstone2022.util.LocalDateTimeUtil;
 
 import org.jetbrains.annotations.Contract;
 
@@ -40,8 +42,8 @@ public class MypageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
 
         finalVaccineDate = view.findViewById(R.id.finalVaccineDate);
-        confirmation = view.findViewById(R.id.vaccineInfo);
-        vaccineInfo = view.findViewById(R.id.confirmation);
+        confirmation = view.findViewById(R.id.confirmation);
+        vaccineInfo = view.findViewById(R.id.vaccineInfo);
         quarantineReleaseDate = view.findViewById(R.id.quarantineReleaseDate);
 
         updateMember();
@@ -52,19 +54,26 @@ public class MypageFragment extends Fragment {
     }
 
     private void updateMember() {
-        // TODO
+        APIConnector.GET("member", (jsonObject -> {
+            MemberData data = MemberData.parseMember(jsonObject);
+
+            finalVaccineDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getFinalVaccineDate()));
+            quarantineReleaseDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getQuarantineReleaseDate()));
+        }));
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         destroy();
+
+        super.onDestroy();
     }
 
     @Override
     public void onDestroyView() {
-        super.onDestroyView();
         destroy();
+
+        super.onDestroyView();
     }
 
     private void destroy() {
@@ -72,6 +81,8 @@ public class MypageFragment extends Fragment {
         this.vaccineInfo = null;
         this.confirmation = null;
         this.quarantineReleaseDate = null;
+
+        APIConnector.cancelAll();
     }
 
 }

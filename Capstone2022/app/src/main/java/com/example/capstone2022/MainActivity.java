@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 ft.replace(R.id.main_frame, mypageFragment);
                 ft.commit();
                 break;
-
         }
     }
 
@@ -83,26 +82,26 @@ public class MainActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
     }
 
-    public void ClickButton1(View view) {
+    public void VirusButton(View view) {
         Intent intent = new Intent(getApplicationContext(), VirusHome.class);
         startActivity(intent);
     }
 
-    public void ClickButton2(View view) {
+    public void GuideButton(View view) {
         Intent intent = new Intent(getApplicationContext(), GuideHome.class);
         startActivity(intent);
     }
 
-    public void ClickButton3(View view) {
+    public void NoticeButton(View view) {
         Intent intent = new Intent(getApplicationContext(), NoticeHome.class);
         startActivity(intent);
     }
 
-    public void ClickButton4(View view) {
+    public void HelpHomeButton(View view) {
         Intent intent = new Intent(getApplicationContext(), HelpHome.class);
         startActivity(intent);
     }
-    public void ClickButton5(View view){
+    public void MeMypageButton(View view){
         Intent intent = new Intent(getApplicationContext(), MeMypage.class);
         startActivity(intent);
     }
