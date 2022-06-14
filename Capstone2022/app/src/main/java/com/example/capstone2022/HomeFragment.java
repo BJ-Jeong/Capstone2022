@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.capstone2022.api.APIConnector;
+import com.example.capstone2022.api.ServerConnector;
 import com.example.capstone2022.api.corona.CoronaData;
 
 import org.jetbrains.annotations.Contract;
@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
     public void updatePopulation() {
         if (getContext() == null) return;
 
-        APIConnector.GET("rest/corona", (jsonObject) -> {
+        ServerConnector.GET("rest/corona", (jsonObject) -> {
             long addDecide = CoronaData.parseData(jsonObject).getAddDecide();
 
             population.setText(String.valueOf(addDecide));
@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
     private void destroy() {
         this.population = null;
 
-        APIConnector.cancelAll();
+        ServerConnector.cancelAll();
     }
 
 }

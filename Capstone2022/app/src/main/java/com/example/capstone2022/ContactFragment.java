@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.capstone2022.api.APIConnector;
+import com.example.capstone2022.api.ServerConnector;
 
 import org.jetbrains.annotations.Contract;
 
@@ -178,7 +177,7 @@ public class ContactFragment extends Fragment {
         this.arrayList = null;
         this.recyclerView = null;
 
-        APIConnector.cancelAll();
+        ServerConnector.cancelAll();
     }
 
 }

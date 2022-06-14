@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.capstone2022.api.APIConnector;
+import com.example.capstone2022.api.ServerConnector;
 import com.example.capstone2022.api.user.MemberData;
 import com.example.capstone2022.util.LocalDateTimeUtil;
 
@@ -54,7 +54,7 @@ public class MypageFragment extends Fragment {
     }
 
     private void updateMember() {
-        APIConnector.GET("member", (jsonObject -> {
+        ServerConnector.GET("member", (jsonObject -> {
             MemberData data = MemberData.parseMember(jsonObject);
 
             finalVaccineDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getFinalVaccineDate()));
@@ -82,7 +82,7 @@ public class MypageFragment extends Fragment {
         this.confirmation = null;
         this.quarantineReleaseDate = null;
 
-        APIConnector.cancelAll();
+        ServerConnector.cancelAll();
     }
 
 }
