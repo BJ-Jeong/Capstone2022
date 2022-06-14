@@ -8,81 +8,89 @@
     android:background="@color/white">
 
     <include layout="@layout/toolbar_f_home"/>
+    <ImageView
+        android:id="@+id/page"
+        android:layout_width="313dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/people" />
 
     <ImageButton
         android:id="@+id/virus"
         android:layout_width="140dp"
         android:layout_height="181dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/white"
         android:onClick="ClickButton1"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/virus"
-        android:background="@color/white"
         tools:ignore="OnClick,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/guide"
         android:layout_width="140dp"
         android:layout_height="180dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="52dp"
+        android:background="@color/white"
         android:onClick="ClickButton2"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/guide"
-        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/notice"
         android:layout_width="140dp"
         android:layout_height="170dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/white"
         android:onClick="ClickButton3"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784"
+        app:layout_constraintTop_toBottomOf="@+id/virus"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/notice"
-        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/help"
         android:layout_width="140dp"
         android:layout_height="170dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="52dp"
+        android:background="@color/white"
         android:onClick="ClickButton4"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784"
+        app:layout_constraintTop_toBottomOf="@+id/guide"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/help"
-        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/page"
-        android:layout_width="313dp"
-        android:layout_height="187dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121"
-        app:srcCompat="@drawable/people" />
 
     <TextView
         android:id="@+id/Population"

@@ -11,8 +11,10 @@
         layout="@layout/toolbar_m_con"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/Covid"
@@ -30,12 +32,14 @@
         android:id="@+id/edit"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="145dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/text_con5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/edit" />
 
     <TextView
@@ -68,9 +72,10 @@
         android:id="@+id/Person"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.406"
@@ -128,9 +133,10 @@
         android:id="@+id/Warning"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.539"
@@ -184,23 +190,13 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <ImageView
-        android:id="@+id/Alect"
+        android:id="@+id/saveMyPageCon"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249"
-        app:srcCompat="@drawable/edit" />
-
-    <ImageView
-        android:id="@+id/saveMyPageCon"
-        android:layout_width="413dp"
-        android:layout_height="62dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683"
@@ -215,7 +211,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Alect"
+        app:layout_constraintStart_toEndOf="@+id/saveMyPageCon"
         app:layout_constraintTop_toBottomOf="@+id/text_con4"
         app:layout_constraintVertical_bias="0.0">
 
@@ -254,7 +250,7 @@
         app:layout_constraintVertical_bias="0.668" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/con_save"
         android:layout_width="413dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"

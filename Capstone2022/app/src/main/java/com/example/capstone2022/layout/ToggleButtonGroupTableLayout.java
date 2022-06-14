@@ -74,7 +74,6 @@ public class ToggleButtonGroupTableLayout extends TableLayout implements View.On
         if (activeRadioButton != null) {
             return activeRadioButton.getId();
         }
-
         return -1;
     }
 

@@ -1,18 +1,25 @@
 package com.example.capstone2022;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.DatePicker;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
+import com.example.capstone2022.api.ServerConnector;
+import com.example.capstone2022.api.user.MemberData;
+import com.example.capstone2022.layout.ToggleButtonGroupTableLayout;
+import com.example.capstone2022.service.UUIDService;
+import com.example.capstone2022.util.GsonUtil;
+import com.google.gson.JsonObject;
+
+import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.UUID;
 
 public class MeMypage extends AppCompatActivity {
     ImageView back_me, iv_save, pancleC;
@@ -20,10 +27,9 @@ public class MeMypage extends AppCompatActivity {
     EditText hname_input, hnumber_input;
     private DatePickerDialog datePickerDialog;
 
-    private RadioGroup rg_1, rg_2;
+    ToggleButtonGroupTableLayout rg_all;
 
     public void init() {
-
         hname_input = findViewById(R.id.ed_hname_input);
         hnumber_input = findViewById(R.id.ed_hnumber_input);
         v_date_input = findViewById(R.id.tv_v_date_input);
@@ -32,12 +38,7 @@ public class MeMypage extends AppCompatActivity {
         pancleC = findViewById(R.id.iv_pancle2);
         iv_save = findViewById(R.id.iv_save);
 
-        rg_1 = findViewById(R.id.rg_1);
-        rg_1.clearCheck();
-        rg_1.setOnCheckedChangeListener(listener1);
-        rg_2 = findViewById(R.id.rg_2);
-        rg_2.clearCheck();
-        rg_2.setOnCheckedChangeListener(listener2);
+        rg_all = findViewById(R.id.rg_all);
     }
 
     @Override
@@ -47,59 +48,61 @@ public class MeMypage extends AppCompatActivity {
 
         this.init();
 
-        back_me.setOnClickListener(view -> {
-            String name = hname_input.getText().toString();
-            String number = hnumber_input.getText().toString();
-            String date = v_date_input.getText().toString();
-
-            finish();
-        });
+        back_me.setOnClickListener(view -> finish());
 
         pancleC.setOnClickListener(view -> {
             Calendar calendar = Calendar.getInstance();
             int pYear = calendar.get(Calendar.YEAR);
             int pMonth = calendar.get(Calendar.MONTH);
             int pDay = calendar.get(Calendar.DAY_OF_MONTH);
-            datePickerDialog = new DatePickerDialog(MeMypage.this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                    month = month + 1;
-                    String date = year + "년" + month + "월" + day + "일";
-                    v_date_input.setText(date);
-                }
+            datePickerDialog = new DatePickerDialog(MeMypage.this, (datePicker, year, month, day) -> {
+                month = month + 1;
+                String date = year + "년" + month + "월" + day + "일";
+                v_date_input.setText(date);
             }, pYear, pMonth, pDay);
             datePickerDialog.show();
         });
 
         iv_save.setOnClickListener(view -> {
-            Intent intent = new Intent(MeMypage.this, MainActivity.class);
-            intent.putExtra("name", hname_input.getText().toString());
-            intent.putExtra("date", v_date_input.getText().toString());
-            intent.putExtra("number", hnumber_input.getText().toString());
-            startActivity(intent);
+            int vaccineCount = -1;
+
+            if (R.id.rb_v_no == rg_all.getCheckedRadioButtonId()) {
+                vaccineCount = 0;
+            } else if (R.id.rb_v_1 == rg_all.getCheckedRadioButtonId()) {
+                vaccineCount = 1;
+            } else if (R.id.rb_v_2 == rg_all.getCheckedRadioButtonId()) {
+                vaccineCount = 2;
+            } else if (R.id.rb_v_3 == rg_all.getCheckedRadioButtonId()) {
+                vaccineCount = 3;
+            }
+
+            if (vaccineCount == -1
+                    || datePickerDialog == null
+                    || hname_input.getText().toString().isEmpty()
+                    || hnumber_input.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "정보를 입력하세요.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            int year = datePickerDialog.getDatePicker().getYear();
+            int month = datePickerDialog.getDatePicker().getMonth() + 1;
+            int day = datePickerDialog.getDatePicker().getDayOfMonth();
+
+            LocalDate vaccineDate = LocalDate.of(year, month, day);
+
+            UUID uuid = new UUIDService(getApplicationContext()).getUUID();
+            MemberData data = MemberData.builder()
+                    .uuid(uuid)
+                    .vaccineCount(vaccineCount)
+                    .hospitalName(hname_input.getText().toString())
+                    .hospitalContact(hnumber_input.getText().toString())
+                    .vaccineDate(vaccineDate).build();
+            JsonObject json = data.toJson();
+
+            Log.d("MyMyPage", "data: " + GsonUtil.toText(json));
+
+            ServerConnector.PATCH("rest/member", json, () -> Log.d(MeMypage.class.getSimpleName(), "data Patched"));
         });
     }
 
-    private final RadioGroup.OnCheckedChangeListener listener1 = new RadioGroup.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup radioGroup, int checkedld) {
-            if (checkedld != -1) {
-                rg_2.setOnCheckedChangeListener(null);
-                rg_2.clearCheck();
-                rg_2.setOnCheckedChangeListener(listener2);
-            }
-        }
-    };
-
-    private final RadioGroup.OnCheckedChangeListener listener2 = new RadioGroup.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup radioGroup, int checkedld) {
-            if (checkedld != -1) {
-                rg_1.setOnCheckedChangeListener(null);
-                rg_1.clearCheck();
-                rg_1.setOnCheckedChangeListener(listener1);
-            }
-        }
-    };
 }
-

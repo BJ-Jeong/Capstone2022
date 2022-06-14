@@ -21,12 +21,6 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
     }
 
-    @NonNull
-    @Contract(" -> new")
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +67,6 @@ public class HomeFragment extends Fragment {
 
     private void destroy() {
         this.population = null;
-
-        ServerConnector.cancelAll();
     }
 
 }

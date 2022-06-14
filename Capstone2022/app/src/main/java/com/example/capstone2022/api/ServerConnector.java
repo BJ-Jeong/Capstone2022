@@ -18,16 +18,25 @@ import java.util.function.Consumer;
 
 public class ServerConnector {
 
-    private static final String requestTag = "APIConnector";
+    private static final String requestTag = ServerConnector.class.getSimpleName();
 
     public static void GET(String path, @NonNull Consumer<JsonObject> after) {
         String url = BuildConfig.SERVER_URL + path;
 
+        Log.d(ServerConnector.class.getSimpleName(), "requesting GET: " + path);
+
         StringRequest request = new StringRequest(url,
-                response -> after.accept(GsonUtil.toJson(response)),
-                error -> Log.w("APIConnector", path + " GET data failed: " + error.getMessage()));
+                response -> {
+                    try {
+                        after.accept(GsonUtil.toJson(response));
+                    } catch (RuntimeException e) {
+                        Log.e(ServerConnector.class.getSimpleName(), path + " GET after error: " + e.getMessage());
+                    }
+                },
+                error -> Log.w(ServerConnector.class.getSimpleName(), path + " GET data failed: " + error.getMessage()));
 
         request.setTag(requestTag);
+        request.setShouldCache(false);
         VolleyUtil.getQueue().add(request);
     }
 
@@ -44,7 +53,7 @@ public class ServerConnector {
 
         StringRequest request = new StringRequest(method, url,
                 response -> after.run(),
-                error -> Log.e("APIConnector", path + " Method: " + method + " data failed: " + error)
+                error -> Log.e(ServerConnector.class.getSimpleName(), path + " Method: " + method + " data failed: " + error)
         ) {
             @NonNull
             @Override

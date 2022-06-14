@@ -34,12 +34,6 @@ public class ContactFragment extends Fragment {
     public ContactFragment() {
     }
 
-    @NonNull
-    @Contract(" -> new")
-    public static ContactFragment newInstance() {
-        return new ContactFragment();
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,24 +49,18 @@ public class ContactFragment extends Fragment {
         checkPermission();
         //연락처 클릭 이벤트(화면 전환)
         adapter.setOnItemClickListener(
-                new MainAdapter.OnItemClickListener(){
-                    @Override
-                    public void onItemClick(View v, int pos){
-                        Intent intent;//인텐트 선언
-                        intent = new Intent(getContext(), ContactInformation.class); //전환할 화면으로 인텐트 연결
-                        ContactModel model = arrayList.get(pos);
-                        intent.putExtra("tvname", model.getName());
-                        intent.putExtra("tvnumber", model.getNumber());//변수값 인텐트로 넘기기
-                        getContext().startActivity(intent); //액티비티 열기
-                    }
+                (v1, pos) -> {
+                    Intent intent;//인텐트 선언
+                    intent = new Intent(getContext(), ContactInformation.class); //전환할 화면으로 인텐트 연결
+                    ContactModel model = arrayList.get(pos);
+                    intent.putExtra("tvname", model.getName());
+                    intent.putExtra("tvnumber", model.getNumber());//변수값 인텐트로 넘기기
+                    getContext().startActivity(intent); //액티비티 열기
                 });
         //연락처 롱 클릭 이벤트(삭제 기능을 넣으면 좋겠지만, 기간 모자라면 개발 안하는걸로)
         adapter.setOnItemLongClickListener(
-                new MainAdapter.OnItemLongClickListener(){
-                    @Override
-                    public void onItemLongClick(View v, int pos){
+                (v12, pos) -> {
 
-                    }
                 });
         return v;
     }
@@ -176,8 +164,6 @@ public class ContactFragment extends Fragment {
         this.adapter = null;
         this.arrayList = null;
         this.recyclerView = null;
-
-        ServerConnector.cancelAll();
     }
 
 }

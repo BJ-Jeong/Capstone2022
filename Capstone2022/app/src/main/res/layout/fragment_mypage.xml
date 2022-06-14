@@ -4,115 +4,219 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:saveEnabled="false"
+    tools:context=".MainActivity">
 
     <include
         android:id="@+id/include2"
-        layout="@layout/toolbar_f_mypage" />
+        layout="@layout/toolbar_f_mypage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/Me"
         android:layout_width="352dp"
         android:layout_height="224dp"
-        app:srcCompat="@drawable/me"
-        android:translationZ="-1dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/me" />
 
     <ImageButton
         android:id="@+id/but_me"
         android:layout_width="45dp"
         android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="45dp"
         android:backgroundTint="#F1F9FF"
         android:onClick="MeMypageButton"
         android:scaleType="fitCenter"
         android:src="@drawable/edit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintBottom_toBottomOf="@+id/Me"
+        app:layout_constraintEnd_toEndOf="@+id/Me"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/include2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282"
+        app:layout_constraintTop_toTopOf="@+id/Me"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/vaccineInfo"
+        android:id="@+id/tv_vaccineInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353" />
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="58dp"
+        android:text="차 접종 완료"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/Me"
+        app:layout_constraintEnd_toEndOf="@+id/Me"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="@+id/Me"
+        app:layout_constraintTop_toTopOf="@+id/Me"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/finalVaccineDate"
+        android:id="@+id/tv_vaccineCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="58dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/Me"
+        app:layout_constraintEnd_toEndOf="@+id/Me"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Me"
+        app:layout_constraintTop_toTopOf="@+id/Me"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/confirmation"
+        android:id="@+id/tv_hname_output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="50dp"
+        android:text="병원 이름"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tv_vaccineInfo"
+        app:layout_constraintEnd_toEndOf="@+id/Me"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Me"
+        app:layout_constraintTop_toTopOf="@+id/Me"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_hnumber_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="병원 전화번호"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tv_vaccineInfo"
+        app:layout_constraintEnd_toStartOf="@+id/but_me"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="@+id/Me"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hname_output"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/tv_finalVaccineDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="33dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/Me"
+        app:layout_constraintEnd_toEndOf="@+id/Me"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Me"
+        app:layout_constraintTop_toTopOf="@+id/Me"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/Confirmed"
-        android:layout_width="140dp"
-        android:layout_height="172dp"
-        android:translationZ="-1dp"
-        app:srcCompat="@drawable/confirmed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
-
-    <TextView
-        android:id="@+id/quarantineReleaseDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812" />
-
-    <ImageView
-        android:id="@+id/Block"
+        android:id="@+id/imageView4"
         android:layout_width="140dp"
         android:layout_height="170dp"
-        android:translationZ="-1dp"
-        app:srcCompat="@drawable/block"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        app:layout_constraintTop_toBottomOf="@+id/Me"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/block" />
+
+    <ImageButton
+        android:id="@+id/but_con"
+        android:layout_width="45dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#F1F9FF"
+        android:onClick="ConMypageButton"
+        android:scaleType="fitCenter"
+        android:src="@drawable/edit"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_quarantineReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="53dp"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_quarantineReleaseDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="53dp"
+        android:text="일"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="140dp"
+        android:layout_height="170dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Me"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/confirmed" />
+
+    <TextView
+        android:id="@+id/tv_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="53dp"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

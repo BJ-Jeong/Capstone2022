@@ -15,8 +15,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.UUID;
 
-import lombok.experimental.UtilityClass;
-
 public class UUIDService {
 
     private final Context context;
@@ -37,10 +35,10 @@ public class UUIDService {
     private UUID findUUID() {
         UUID uuid = null;
 
-        try {
-            FileInputStream fis = context.openFileInput("uuid.txt");
-            DataInputStream dis = new DataInputStream(fis);
-
+        try (
+                FileInputStream fis = context.openFileInput("uuid.txt");
+                DataInputStream dis = new DataInputStream(fis)
+        ) {
             uuid = UUID.fromString(dis.readUTF());
         } catch (FileNotFoundException e) {
             Log.w("UUIDService", "UUID file not found");
@@ -60,13 +58,12 @@ public class UUIDService {
     public void setUUID(@NonNull UUID uuid) {
         Log.d("UUIDService", "Set uuid to " + uuid);
 
-        try {
-            FileOutputStream fos = context.openFileOutput("uuid.txt", Context.MODE_PRIVATE);
-            DataOutputStream dos = new DataOutputStream(fos);
-
+        try (
+                FileOutputStream fos = context.openFileOutput("uuid.txt", Context.MODE_PRIVATE);
+                DataOutputStream dos = new DataOutputStream(fos)
+        ) {
             dos.writeUTF(uuid.toString());
             dos.flush();
-            dos.close();
         } catch (IOException e) {
             Toast.makeText(context, "UUID 설정에 실패 했습니다.", Toast.LENGTH_SHORT).show();
             Log.e("UUIDService", "Failed to set UUID from storage", e);
