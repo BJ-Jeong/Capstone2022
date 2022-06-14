@@ -16,7 +16,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class APIConnector {
+public class ServerConnector {
+
+    private static final String requestTag = "APIConnector";
 
     public static void GET(String path, @NonNull Consumer<JsonObject> after) {
         String url = BuildConfig.SERVER_URL + path;
@@ -25,15 +27,24 @@ public class APIConnector {
                 response -> after.accept(GsonUtil.toJson(response)),
                 error -> Log.w("APIConnector", path + " GET data failed: " + error.getMessage()));
 
+        request.setTag(requestTag);
         VolleyUtil.getQueue().add(request);
     }
 
     public static void POST(String path, JsonObject json, Runnable after) {
+        run(path, json, after, Request.Method.POST);
+    }
+
+    public static void PATCH(String path, JsonObject json, Runnable after) {
+        run(path, json, after, Request.Method.PATCH);
+    }
+
+    private static void run(String path, JsonObject json, Runnable after, int method) {
         String url = BuildConfig.SERVER_URL + path;
 
-        StringRequest request = new StringRequest(Request.Method.POST, url,
+        StringRequest request = new StringRequest(method, url,
                 response -> after.run(),
-                error -> Log.e("APIConnector", path + " POST data failed: " + error)
+                error -> Log.e("APIConnector", path + " Method: " + method + " data failed: " + error)
         ) {
             @NonNull
             @Override
@@ -51,7 +62,12 @@ public class APIConnector {
         };
 
         request.setShouldCache(false);
+        request.setTag(requestTag);
         VolleyUtil.getQueue().add(request);
+    }
+
+    public static void cancelAll() {
+        VolleyUtil.getQueue().cancelAll(requestTag);
     }
 
 }

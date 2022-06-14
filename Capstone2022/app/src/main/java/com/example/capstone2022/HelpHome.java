@@ -2,7 +2,6 @@ package com.example.capstone2022;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,13 +16,9 @@ public class HelpHome extends AppCompatActivity {
 
         back_h = findViewById(R.id.back_help);
 
-
-        back_h.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent MyTntent = new Intent(HelpHome.this, MainActivity.class);
-                startActivity(MyTntent);
-            }
+        back_h.setOnClickListener(view -> {
+            Intent MyIntent = new Intent(HelpHome.this, MainActivity.class);
+            startActivity(MyIntent);
         });
     }
 }

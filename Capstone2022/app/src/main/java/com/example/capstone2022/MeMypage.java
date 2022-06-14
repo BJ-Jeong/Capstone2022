@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 public class MeMypage extends AppCompatActivity {
     ImageView back_me, iv_save, pancleC;
@@ -52,14 +53,21 @@ public class MeMypage extends AppCompatActivity {
         back_me.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MeMypage.this, MypageFragment.class);
-                String name = hname_input.getText().toString();
-                String number = hnumber_input.getText().toString();
-                String date = v_date_input.getText().toString();
-                intent.putExtra("name",name);
-                intent.putExtra("number",number);
-                intent.putExtra("date",date);
-                startActivity(intent);
+                Fragment fragment = new Fragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("name", hname_input.getText().toString());
+                bundle.putString("numbeer", hnumber_input.getText().toString());
+                bundle.putString("date", v_date_input.getText().toString());
+                fragment.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction().add(R.id.f_mypage_x, fragment).commit();
+//                Intent intent = new Intent(MeMypage.this, MypageFragment.class);
+//                String name = hname_input.getText().toString();
+//                String number = hnumber_input.getText().toString();
+//                String date = v_date_input.getText().toString();
+//                intent.putExtra("name",name);
+//                intent.putExtra("number",number);
+//                intent.putExtra("date",date);
+//                startActivity(intent);
             }
         });
 

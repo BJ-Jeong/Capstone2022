@@ -11,21 +11,17 @@ public class NoticeHome extends AppCompatActivity {
 
     ImageView back_n;
 
-    @Override    protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_notice);
 
         back_n = findViewById(R.id.back_notice);
 
-        back_n.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent MyTntent = new Intent(NoticeHome.this, MainActivity.class);
-                startActivity(MyTntent);
-            }
+        back_n.setOnClickListener(view -> {
+            Intent MyIntent = new Intent(NoticeHome.this, MainActivity.class);
+            startActivity(MyIntent);
         });
-
-
 
     }
 }

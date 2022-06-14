@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <include
         android:id="@+id/include3"
         layout="@layout/toolbar_m_con"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/Covid"
@@ -24,16 +27,16 @@
         app:srcCompat="@drawable/covid" />
 
     <ImageView
-        android:id="@+id/Alect"
+        android:id="@+id/edit"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.763"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683"
-        app:srcCompat="@drawable/alect" />
+        app:layout_constraintVertical_bias="0.221"
+        app:srcCompat="@drawable/edit" />
 
     <TextView
         android:id="@+id/text_con1"
@@ -49,17 +52,17 @@
         app:layout_constraintVertical_bias="0.217" />
 
     <TextView
-        android:id="@+id/text_con2"
+        android:id="@+id/text_con5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="자가진단키트"
+        android:text="여기에 입력한 일시가 보이게"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <ImageView
         android:id="@+id/Person"
@@ -72,6 +75,100 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.406"
         app:srcCompat="@drawable/person" />
+
+    <TextView
+        android:id="@+id/text_con2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자가진단키트"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.397" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Person"
+        app:layout_constraintTop_toBottomOf="@+id/text_con2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rb_selfpos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="75dp"
+            android:buttonTint="@color/blue1"
+            android:checked="false"
+            android:text="양성"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_selfneg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue1"
+            android:text="음성"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/Warning"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539"
+        app:srcCompat="@drawable/warning" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Warning"
+        app:layout_constraintTop_toBottomOf="@+id/text_con3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rb_fastpos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="75dp"
+            android:buttonTint="@color/blue1"
+            android:checked="false"
+            android:text="양성"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_fastneg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue1"
+            android:text="음성"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/text_con3"
@@ -87,16 +184,61 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <ImageView
-        android:id="@+id/Warning"
+        android:id="@+id/Alect"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539"
-        app:srcCompat="@drawable/warning" />
+        app:layout_constraintVertical_bias="0.249"
+        app:srcCompat="@drawable/edit" />
+
+    <ImageView
+        android:id="@+id/saveMyPageCon"
+        android:layout_width="413dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683"
+        app:srcCompat="@drawable/alect" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Alect"
+        app:layout_constraintTop_toBottomOf="@+id/text_con4"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rb_pcrpos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="75dp"
+            android:buttonTint="@color/blue1"
+            android:checked="false"
+            android:text="양성"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_pcrneg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue1"
+            android:text="음성"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/text_con4"
@@ -111,33 +253,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.668" />
 
-    <TextView
-        android:id="@+id/text_con5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="날짜 선택"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
-
     <ImageView
-        android:id="@+id/edit"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249"
-        app:srcCompat="@drawable/edit" />
-
-    <ImageView
-        android:id="@+id/saveMyPage"
+        android:id="@+id/imageView9"
         android:layout_width="413dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -146,80 +263,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/save" />
-
-    <RadioGroup
-        android:id="@+id/self"
-        android:layout_width="197dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="280dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/selfpos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="양성" />
-
-        <RadioButton
-            android:id="@+id/selfneg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="음성" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/fast"
-        android:layout_width="197dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="365dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/fastpos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="양성" />
-
-        <RadioButton
-            android:id="@+id/fastneg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="음성" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/pcr"
-        android:layout_width="197dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="450dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/pcrpos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="양성" />
-
-        <RadioButton
-            android:id="@+id/pcrneg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="음성" />
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
