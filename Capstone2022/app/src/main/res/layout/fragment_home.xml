@@ -90,11 +90,12 @@
         android:layout_height="wrap_content"
         android:gravity="right"
         android:text="여기에 일일 확진자 수가 들어감"
+        android:textColor="#0277BD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/page"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.171" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
