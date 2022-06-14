@@ -46,21 +46,21 @@ public class MypageFragment extends Fragment {
         vaccineInfo = view.findViewById(R.id.vaccineInfo);
         quarantineReleaseDate = view.findViewById(R.id.quarantineReleaseDate);
 
-        updateMember();
+        //updateMember();
         view.invalidate();
         view.requestLayout();
 
         return view;
     }
 
-    private void updateMember() {
-        ServerConnector.GET("member", (jsonObject -> {
-            MemberData data = MemberData.parseMember(jsonObject);
+    //private void updateMember() {
+        //ServerConnector.GET("member", (jsonObject -> {
+            //MemberData data = MemberData.parseMember(jsonObject);
 
-            finalVaccineDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getFinalVaccineDate()));
-            quarantineReleaseDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getQuarantineReleaseDate()));
-        }));
-    }
+            //finalVaccineDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getFinalVaccineDate()));
+            //quarantineReleaseDate.setText(LocalDateTimeUtil.getTimeString(data.getCoronaInfo().getQuarantineReleaseDate()));
+        //}));
+    //}
 
     @Override
     public void onDestroy() {

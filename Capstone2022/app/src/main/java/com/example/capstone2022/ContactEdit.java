@@ -55,8 +55,8 @@ public class ContactEdit extends AppCompatActivity {
 
         DatePickerDialog datesetv = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker view, int year, int month, int day) {
-                virusedit.setText(year +"-"+ (month+1) +"-"+ day);
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                virusedit.setText(year +"-"+ (month+1) +"-"+ dayOfMonth);
             }
         }, cal.get(Calendar.YEAR), (cal.get(Calendar.MONTH)+1), cal.get(Calendar.DATE));
         virusedit.setOnClickListener(new View.OnClickListener() {
@@ -70,8 +70,8 @@ public class ContactEdit extends AppCompatActivity {
 
         DatePickerDialog datesetc = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker view, int year, int month, int day) {
-                clearedit.setText(year +"-"+ (month+1) +"-"+ day);
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                clearedit.setText(year +"-"+ (month+1) +"-"+ dayOfMonth);
             }
         }, cal.get(Calendar.YEAR), (cal.get(Calendar.MONTH)+1), cal.get(Calendar.DATE));
         clearedit.setOnClickListener(new View.OnClickListener() {
@@ -85,8 +85,8 @@ public class ContactEdit extends AppCompatActivity {
 
         DatePickerDialog datesetvac = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker view, int year, int month, int day) {
-                vaccineedit.setText(year +"-"+ (month+1) +"-"+ day);
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                vaccineedit.setText(year +"-"+ (month+1) +"-"+ dayOfMonth);
             }
         }, cal.get(Calendar.YEAR), (cal.get(Calendar.MONTH)+1), cal.get(Calendar.DATE));
         vaccineedit.setOnClickListener(new View.OnClickListener() {
