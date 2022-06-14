@@ -1,6 +1,7 @@
 package com.example.capstone2022;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -51,7 +52,27 @@ public class ContactFragment extends Fragment {
         recyclerView = v.findViewById(R.id.recycler_view);
 
         checkPermission();
+        //연락처 클릭 이벤트(화면 전환)
+        adapter.setOnItemClickListener(
+                new MainAdapter.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(View v, int pos){
+                        Intent intent;//인텐트 선언
+                        intent = new Intent(getContext(), ContactInformation.class); //전환할 화면으로 인텐트 연결
+                        ContactModel model = arrayList.get(pos);
+                        intent.putExtra("tvname", model.getName());
+                        intent.putExtra("tvnumber", model.getNumber());//변수값 인텐트로 넘기기
+                        getContext().startActivity(intent); //액티비티 열기
+                    }
+                });
+        //연락처 롱 클릭 이벤트(삭제 기능을 넣으면 좋겠지만, 기간 모자라면 개발 안하는걸로)
+        adapter.setOnItemLongClickListener(
+                new MainAdapter.OnItemLongClickListener(){
+                    @Override
+                    public void onItemLongClick(View v, int pos){
 
+                    }
+                });
         return v;
     }
 

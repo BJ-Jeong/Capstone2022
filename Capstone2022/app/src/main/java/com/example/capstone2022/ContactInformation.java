@@ -2,9 +2,11 @@ package com.example.capstone2022;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ContactInformation extends AppCompatActivity {
 
@@ -20,5 +22,11 @@ public class ContactInformation extends AppCompatActivity {
         back_im.setOnClickListener(view -> {
 
         });
+        TextView tv_pnumber = findViewById(R.id.tv_pnumber);
+
+        Intent intent = getIntent();
+        String tvna = intent.getStringExtra("tvname");
+        String tvnu = intent.getStringExtra("tvnumber");
+        tv_pnumber.setText(tvnu);
     }
 }
