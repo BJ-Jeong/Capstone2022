@@ -66,15 +66,4 @@
         android:backgroundTint="@color/blue1"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/tv_pnumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="324dp"
-        android:text="TextView" />
-
 </RelativeLayout>
