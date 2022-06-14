@@ -21,10 +21,8 @@ public class ContactInformation extends AppCompatActivity {
         setContentView(R.layout.contact_imformation);
 
         back_im = findViewById(R.id.back_im);
+        back_im.setOnClickListener(view -> finish());
 
-        back_im.setOnClickListener(view -> {
-
-        });
         //텍스트 뷰 설정
         TextView tv_pnumber = findViewById(R.id.tv_pnumber);
         TextView tv_pname = findViewById(R.id.c_imfor_ti);
@@ -43,17 +41,13 @@ public class ContactInformation extends AppCompatActivity {
         //플로팅 액션버튼 설정
         FloatingActionButton fab = findViewById(R.id.bt_revise);
         //플로팅 액션 버튼에 클릭 리스너 지정
-        fab.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //인텐트 정의(다른 화면으로 넘어가야 하므로, 방금 데이터 받을 용도로 만든 것과 별개.)
-                Intent intent = new Intent(getApplicationContext(), ContactEdit.class);
-                intent.putExtra("tvname",tvna);
-                intent.putExtra("tvnumber",tvnu);
-                //해당 화면으로 전환
-                startActivity(intent);
-            }
+        fab.setOnClickListener(view -> {
+            //인텐트 정의(다른 화면으로 넘어가야 하므로, 방금 데이터 받을 용도로 만든 것과 별개.)
+            Intent intent1 = new Intent(getApplicationContext(), ContactEdit.class);
+            intent1.putExtra("tvname",tvna);
+            intent1.putExtra("tvnumber",tvnu);
+            //해당 화면으로 전환
+            startActivity(intent1);
         });
 
         //인텐트 정의 (이 인텐트는 ContactEdit에서 넘어옵니다.

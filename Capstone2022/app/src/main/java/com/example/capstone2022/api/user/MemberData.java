@@ -6,34 +6,36 @@ import com.example.capstone2022.util.GsonUtil;
 import com.google.gson.JsonObject;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class MemberData {
 
     private UUID uuid;
 
-    private String vaccineInfo;
+    private Integer vaccineCount;
     private String hospitalName;
     private String hospitalContact;
     private LocalDate vaccineDate;
+    private LocalDate confirmDate;
+    private LocalDate quarantineReleaseDate;
+    private Boolean kitPositive; // 자가진단키트 양성
+    private Boolean fastPositive; // 신속항원검사 양성
+    private Boolean pcrPositive; // PCR 양성
 
     @NonNull
     public static MemberData parseMember(@NonNull JsonObject jsonObject) {
-        UUID uuid = UUID.fromString(jsonObject.get("id").getAsString());
+        return GsonUtil.getGsonNull().fromJson(jsonObject, MemberData.class);
+    }
 
-        String vaccineInfo = jsonObject.get("vaccineInfo").getAsString();
-        String hospitalName = jsonObject.get("hospitalName").getAsString();
-        String hospitalContact = jsonObject.get("hospitalContact").getAsString();
-
-        LocalDate vaccineDate = LocalDate.parse(jsonObject.get("vaccineDate").getAsString());
-
-        return new MemberData(uuid, vaccineInfo, hospitalName, hospitalContact, vaccineDate);
+    public JsonObject toJson() {
+        return (JsonObject) GsonUtil.getGson().toJsonTree(this);
     }
 
 }

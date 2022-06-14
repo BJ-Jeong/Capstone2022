@@ -9,9 +9,11 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class ContactData {
 
@@ -33,20 +35,7 @@ public class ContactData {
 
     @NonNull
     public static ContactData parseContact(@NonNull JsonObject jsonObject) {
-        UUID uuid = UUID.fromString(jsonObject.get("id").getAsString());
-        String name = jsonObject.get("name").getAsString();
-        String phoneNo = jsonObject.get("phoneNo").getAsString();
-
-        JsonObject coronaInfo = jsonObject.getAsJsonObject("coronaInfo");
-
-        LocalDateTime confirmationDate = LocalDateTime.parse(coronaInfo.get("confirmationDate").getAsString());
-        LocalDateTime finalVaccineDate = LocalDateTime.parse(coronaInfo.get("finalVaccineDate").getAsString());
-        LocalDateTime quarantineReleaseDate = LocalDateTime.parse(coronaInfo.get("quarantineReleaseDate").getAsString());
-        boolean overseasEntry = jsonObject.get("overseasEntry").getAsBoolean();
-        boolean closeContact = jsonObject.get("closeContact").getAsBoolean();
-
-        return new ContactData(uuid, name, phoneNo,
-                new ContactData.ContactCoronaInfo(confirmationDate, finalVaccineDate, quarantineReleaseDate, overseasEntry, closeContact));
+        return GsonUtil.getGsonNull().fromJson(jsonObject, ContactData.class);
     }
 
 }

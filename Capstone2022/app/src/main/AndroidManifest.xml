@@ -35,6 +35,7 @@
         <activity android:name=".NoticeHome" />
         <activity android:name=".HelpHome" />
         <activity android:name=".MeMypage" />
+        <activity android:name=".ContactMypage" />
 
     </application>
 
