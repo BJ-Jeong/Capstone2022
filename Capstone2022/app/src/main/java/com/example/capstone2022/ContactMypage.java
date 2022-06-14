@@ -26,6 +26,13 @@ public class ContactMypage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage_con);
 
+        selfPos = findViewById(R.id.rb_selfpos);
+        selfNeg = findViewById(R.id.rb_selfneg);
+        fastPos = findViewById(R.id.rb_fastpos);
+        fastNeg = findViewById(R.id.rb_fastneg);
+        pcrPos = findViewById(R.id.rb_pcrpos);
+        pcrNeg = findViewById(R.id.rb_pcrneg);
+
         back_c = findViewById(R.id.back_con);
         back_c.setOnClickListener(view -> finish());
 
@@ -38,19 +45,14 @@ public class ContactMypage extends AppCompatActivity {
 
             datePickerDialog = new DatePickerDialog(getApplicationContext(), (datePicker, year, month, day) -> {
                 month = month + 1;
-                String date = year + "/" + month + "/" + day;
+                String date = year + "년" + month + "월" + day + "일";
                 text_con5.setText(date);
             }, pYear, pMonth, pDay);
 
             datePickerDialog.show();
         });
 
-        selfPos = findViewById(R.id.selfpos);
-        selfNeg = findViewById(R.id.selfneg);
-        fastPos = findViewById(R.id.fastpos);
-        fastNeg = findViewById(R.id.fastneg);
-        pcrPos = findViewById(R.id.pcrpos);
-        pcrNeg = findViewById(R.id.pcrneg);
+
 
         saveMyPageCon = findViewById(R.id.saveMyPageCon);
         saveMyPageCon.setOnClickListener(view -> {

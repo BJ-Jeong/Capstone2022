@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:id="@+id/f_mypage_x">
+    <include layout="@layout/toolbar_m_me"/>
 
 
     <include
@@ -193,6 +195,69 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/Date"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="68dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/date" />
+
+    <ImageView
+        android:id="@+id/iv_pancle2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="TODO"
+        android:onClick="ClickButtonCalender"
+        app:layout_constraintBottom_toTopOf="@+id/iv_pancle3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_date_input"
+        app:layout_constraintTop_toBottomOf="@+id/tv_v_date"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/edit"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_v_date_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:hint="날짜 선택"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/Date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_v_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_v_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="접종 받을/받은 일시"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585" />
+
+    <ImageView
         android:id="@+id/Call"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -235,69 +300,6 @@
         app:srcCompat="@drawable/edit" />
 
     <ImageView
-        android:id="@+id/Date"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginBottom="68dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toTopOf="@+id/Call"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/date" />
-
-    <TextView
-        android:id="@+id/tv_v_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="접종 받을/받은 일시"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Date"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
-
-    <TextView
-        android:id="@+id/tv_v_date_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="14dp"
-        android:hint="날짜 선택"
-        android:textColor="@color/gray"
-        android:textColorHint="@color/gray"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@+id/Date"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_date"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/iv_pancle2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="80dp"
-        android:contentDescription="TODO"
-        android:onClick="ClickButtonCalender"
-        app:layout_constraintBottom_toTopOf="@+id/iv_pancle3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_v_date_input"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_date"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/edit"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <ImageView
         android:id="@+id/iv_save"
         android:layout_width="413dp"
         android:layout_height="62dp"
@@ -309,5 +311,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/save" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
