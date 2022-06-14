@@ -30,7 +30,7 @@ public class MeMypage extends AppCompatActivity {
         v_date_input = findViewById(R.id.tv_v_date_input);
 
         back_me = findViewById(R.id.back_me);
-        pancleC = findViewById(R.id.iv_panclec);
+        pancleC = findViewById(R.id.iv_pancle2);
         iv_save = findViewById(R.id.iv_save);
 
         rg_1 = findViewById(R.id.rg_1);

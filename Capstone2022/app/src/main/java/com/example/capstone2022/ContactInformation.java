@@ -59,10 +59,14 @@ public class ContactInformation extends AppCompatActivity {
         //인텐트 정의 (이 인텐트는 ContactEdit에서 넘어옵니다.
         Intent intent2 = getIntent();
         //인텐트에서 받아오기
+        String tvna2 = intent2.getStringExtra("tvname");
+        String tvnu2 = intent2.getStringExtra("tvnumber");
         String tvvi = intent2.getStringExtra("tvvirus");
         String tvcl = intent2.getStringExtra("tvclear");
         String tvva = intent2.getStringExtra("tvvaccine");
         //텍스트 뷰에 값 전달
+        tv_pnumber.setText(tvnu2);
+        tv_pname.setText(tvna2);
         tv_virus.setText(tvvi);
         tv_clear.setText(tvcl);
         tv_vaccine.setText(tvva);

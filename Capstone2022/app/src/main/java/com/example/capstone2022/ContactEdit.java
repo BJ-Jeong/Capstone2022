@@ -100,15 +100,14 @@ public class ContactEdit extends AppCompatActivity {
 
         //플로팅 액션버튼 설정
         FloatingActionButton fab = findViewById(R.id.bt_save);
-        //전달 용도로 데이터 저장
-        String virusDate = (String) virusedit.getText();
-        String clearDate = (String) clearedit.getText();
-        String vaccineDate = (String) vaccineedit.getText();
         //플로팅 액션 버튼에 클릭 리스너 지정
         fab.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
+                //전달 용도로 데이터 저장
+                String virusDate = (String) virusedit.getText();
+                String clearDate = (String) clearedit.getText();
+                String vaccineDate = (String) vaccineedit.getText();
                 //인텐트 정의
                 Intent intent = new Intent(getApplicationContext(), ContactInformation.class);
                 intent.putExtra("tvname",tvna);
