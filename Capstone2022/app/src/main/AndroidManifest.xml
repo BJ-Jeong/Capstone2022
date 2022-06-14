@@ -18,6 +18,9 @@
             android:name=".ContactInformation"
             android:exported="false" />
         <activity
+            android:name=".ContactEdit"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true">

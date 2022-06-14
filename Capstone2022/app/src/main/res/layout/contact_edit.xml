@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactInformation">
+    tools:context=".ContactEdit">
+
 
     <include layout="@layout/toolbar_c_imfor" />
 
@@ -52,8 +53,28 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/c_vaccine_date" />
 
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_p_number"
+        android:layout_alignTop="@+id/square_p_number"
+        android:layout_alignEnd="@+id/square_p_number"
+        android:layout_alignBottom="@+id/square_p_number"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="여기에 전달받은 번호가 보이게"
+        android:textColor="@color/gray" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bt_revise"
+        android:id="@+id/bt_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -62,8 +83,53 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_baseline_create_24"
+        android:src="@drawable/check"
         android:backgroundTint="@color/blue1"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/date_virus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_c_virus"
+        android:layout_alignTop="@+id/square_c_virus"
+        android:layout_alignEnd="@+id/square_c_virus"
+        android:layout_alignBottom="@+id/square_c_virus"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="22dp"
+        android:text="날짜 입력"
+        android:textColor="@color/gray" />
+
+
+    <TextView
+        android:id="@+id/date_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_c_clear"
+        android:layout_alignTop="@+id/square_c_clear"
+        android:layout_alignEnd="@+id/square_c_clear"
+        android:layout_alignBottom="@+id/square_c_clear"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="17dp"
+        android:text="날짜 입력"
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:id="@+id/date_vaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_c_vaccine"
+        android:layout_alignTop="@+id/square_c_vaccine"
+        android:layout_alignEnd="@+id/square_c_vaccine"
+        android:layout_alignBottom="@+id/square_c_vaccine"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="15dp"
+        android:text="날짜 입력"
+        android:textColor="@color/gray" />
 </RelativeLayout>

@@ -70,11 +70,60 @@
         android:id="@+id/tv_pnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="324dp"
-        android:text="TextView" />
+        android:layout_alignStart="@+id/square_p_number"
+        android:layout_alignTop="@+id/square_p_number"
+        android:layout_alignEnd="@+id/square_p_number"
+        android:layout_alignBottom="@+id/square_p_number"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="301dp"
+        android:layout_marginBottom="12dp"
+        android:text="TextView"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_virus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_c_virus"
+        android:layout_alignTop="@+id/square_c_virus"
+        android:layout_alignEnd="@+id/square_c_virus"
+        android:layout_alignBottom="@+id/square_c_virus"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="18dp"
+        android:text="-"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_c_clear"
+        android:layout_alignTop="@+id/square_c_clear"
+        android:layout_alignEnd="@+id/square_c_clear"
+        android:layout_alignBottom="@+id/square_c_clear"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="17dp"
+        android:text="-"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_vaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/square_c_vaccine"
+        android:layout_alignTop="@+id/square_c_vaccine"
+        android:layout_alignEnd="@+id/square_c_vaccine"
+        android:layout_alignBottom="@+id/square_c_vaccine"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="17dp"
+        android:text="-"
+        android:textColor="@color/black" />
 
 </RelativeLayout>
