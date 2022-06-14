@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), HelpHome.class);
         startActivity(intent);
     }
-    public void ClickButton5(View view){
+    public void MeMypageButton(View view){
         Intent intent = new Intent(getApplicationContext(), MeMypage.class);
         startActivity(intent);
     }

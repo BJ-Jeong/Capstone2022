@@ -159,21 +159,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_hname"
         app:layout_constraintVertical_bias="0.06999999" />
 
-    <ImageView
-        android:id="@+id/iv_pancle1"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="80dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toTopOf="@+id/iv_pancle2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/ed_hname_input"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hname"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/edit" />
-
 
     <EditText
         android:id="@+id/ed_hnumber_input"
@@ -213,18 +198,15 @@
         android:id="@+id/iv_pancle2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="80dp"
-        android:contentDescription="TODO"
         android:onClick="ClickButtonCalender"
-        app:layout_constraintBottom_toTopOf="@+id/iv_pancle3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_v_date_input"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_date"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593"
         app:srcCompat="@drawable/edit"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tv_v_date_input"
@@ -284,20 +266,6 @@
         app:layout_constraintStart_toEndOf="@+id/Call"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.707" />
-
-    <ImageView
-        android:id="@+id/iv_pancle3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="60dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/ed_hnumber_input"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hnumber"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/edit" />
 
     <ImageView
         android:id="@+id/iv_save"
