@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class APIConnector {
+public class ServerConnector {
 
     private static final String requestTag = "APIConnector";
 
@@ -32,11 +32,19 @@ public class APIConnector {
     }
 
     public static void POST(String path, JsonObject json, Runnable after) {
+        run(path, json, after, Request.Method.POST);
+    }
+
+    public static void PATCH(String path, JsonObject json, Runnable after) {
+        run(path, json, after, Request.Method.PATCH);
+    }
+
+    private static void run(String path, JsonObject json, Runnable after, int method) {
         String url = BuildConfig.SERVER_URL + path;
 
-        StringRequest request = new StringRequest(Request.Method.POST, url,
+        StringRequest request = new StringRequest(method, url,
                 response -> after.run(),
-                error -> Log.e("APIConnector", path + " POST data failed: " + error)
+                error -> Log.e("APIConnector", path + " Method: " + method + " data failed: " + error)
         ) {
             @NonNull
             @Override
